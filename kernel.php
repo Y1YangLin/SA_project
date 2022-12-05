@@ -16,4 +16,10 @@ spl_autoload_register(function($class){
 
 $db = Connection::connect($config);
 
+$load_new = new HomeController();
+$model = new HomeModel();
+$load_new->model = $model;
+$model->db = $db;
+$index = $load_new->indexAction();
+
 ?>
