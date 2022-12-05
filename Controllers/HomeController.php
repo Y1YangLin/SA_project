@@ -7,9 +7,14 @@ class HomeController{
     public function add_salt($password, $salt){
         $hashed_password = "".$salt."".$password."";
         return $hashed_password;
+
     }
 
     public function indexAction(){
+
+        if(isset($_GET["logout"])){
+            unset($_SESSION["userLogin"]);
+        }
 
         if(isset($_POST["LoginSubmit"])){
             $username = $_POST["username"];
@@ -37,16 +42,16 @@ class HomeController{
 
     public function routeManager(){
 
-        if($_SESSION["userLogin"]){
+        if(isset($_SESSION["userLogin"])){
             return require_once("./views/dashboard.php");
         }
 
-        if($_SESSION["register"]){
-            return require_once("./views/dashboard.php");
+        if(isset($_GET["register"])){
+            return require_once("./views/register.php");
         }
 
-        if($_SESSION["login"]){
-            return require_once("./views/dashboard.php");
+        if(isset($_GET["login"]) || isset($_GET["logout"])){
+            return require_once("./views/login.php");
         }
 
         return require_once("./views/login.php");
