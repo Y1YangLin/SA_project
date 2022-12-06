@@ -26,7 +26,9 @@ include_once("kernel.php");
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html"></a></li>
-                </ul><a class="btn btn-primary shadow" role="button" href="./Views/register.php">Sign up</a><a href="./Views/login.php"><button class="btn btn-primary" type="button">Login</button></a>
+                </ul>
+                <a class="btn btn-primary shadow" role="button" href="./Views/register.php">Sign up</a>
+                <a href="./Views/login.php"><button class="btn btn-primary" type="button">Login</button></a>
             </div>
         </div>
     </nav>

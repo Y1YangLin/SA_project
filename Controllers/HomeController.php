@@ -52,7 +52,7 @@ class HomeController{
     public function routeManager(){
 
         if(isset($_SESSION["userLogin"])){
-            return require_once("./Views/dashboard.php");
+            return header("Location: ../Views/dashboard.php");
         }
 
         if(isset($_GET["register"])){
