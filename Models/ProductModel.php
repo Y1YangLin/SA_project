@@ -11,7 +11,7 @@ class ProductModel{
 
  
     public function VisitorBrowseProduct($product_id){
-        $query = "SELECT * FROM product WHERE Product_id='{$product_id}'";
+        $query = "SELECT * FROM product WHERE Product_id ='{$product_id}'";
 
         $stmt = $this->db->prepare($query)->execute();
         print_r($stmt);
