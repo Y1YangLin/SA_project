@@ -43,7 +43,7 @@ class HomeController{
             $_SESSION["userLogin"] = 1;
         }
         $this->routeManager();
-        echo "test";
+        echo 'Controller test';
     }
 
     public function routeManager(){
