@@ -1,5 +1,6 @@
 <?php
-session_start();
+
+// session_start();
 
 class HomeController{
     public $model;
@@ -17,8 +18,8 @@ class HomeController{
         }
 
         if(isset($_POST["LoginSubmit"])){
-            $username = $_POST["username"];
-            $useremail = $_POST["useremail"];
+            $username = $_POST["name"];
+            $useremail = $_POST["email"];
             $password = $_POST["password"];
 
             $checkUserLogin = $this->model->check_user_login($username,$useremail,$password);
@@ -26,35 +27,40 @@ class HomeController{
             if($checkUserLogin == 1){    
                 $_SESSION["userLogin"] = 1;
             }
-
+            
         }
         if(isset($_POST["RegisterSubmit"])){
-            $username = $_POST["username"];
-            $password = $_POST["password"];
+
+            $username = $_POST["name"];
             $useremail = $_POST["email"];
+            $password = $_POST["password"];
+            
+
+            // echo $username . " " . $useremail . " " . $password;
+            echo $_POST["RegisterSubmit"];
 
             $this->model->UserRegister($username, $useremail, $this->add_salt($password, $username));
             $_SESSION["userLogin"] = 1;
         }
         $this->routeManager();
-
+        echo "test";
     }
 
     public function routeManager(){
 
         if(isset($_SESSION["userLogin"])){
-            return require_once("./views/dashboard.php");
+            return require_once("./Views/dashboard.php");
         }
 
         if(isset($_GET["register"])){
-            return require_once("./views/register.php");
+            return require_once("./Views/register.php");
         }
 
         if(isset($_GET["login"]) || isset($_GET["logout"])){
-            return require_once("./views/login.php");
+            return require_once("./Views/login.php");
         }
 
-        return require_once("./views/login.php");
+        return require_once("./index.php");
     }
 
 };
