@@ -1,8 +1,35 @@
 <?php
-    // session_start();
+ /**
+  *  Google機器人驗證 
+  *  @param string $token
+  *  @return bool 
+  */
+    function recaptchaCheck($token){
+        if(!$token){
+            // echo "機器人驗證-未驗證";
+            return false;
+        }
+
+        $secret_key = '6Lffu18jAAAAAAJuiZL_4sh0GiE4deYzoFgCmsfx';
+        $response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$token);
+        $response_data = json_decode($response,true);
+        if($response_data["success"]){
+            // echo "驗證成功66666";
+            return True;
+        }else{
+            // echo "機器人驗證-失敗000000000";
+            return False;
+        }
+    }
 
 
-    
+    if(isset($_POST['g-recaptcha-response'])){
+        if(recaptchaCheck($_POST['g-recaptcha-response'])==0 ){
+            echo "<script>alert('Your are fucking robot');</script>"; 
+        }else{
+            header("Location: kernel.php");
+        }
+    }
 ?>
 
 <html lang="en">
@@ -13,6 +40,8 @@
     <title>Log in - Brand</title>
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
 </head>
 
 <body>
@@ -41,9 +70,12 @@
                             <div class="bs-icon-xl bs-icon-circle bs-icon-primary shadow bs-icon my-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person">
                                     <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
                                 </svg></div>
-                            <form method="post" action="../kernel.php">
+                            <form method="post" action="">
                                 <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
                                 <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+
+                                <div class="g-recaptcha" data-theme="dark" data-sitekey="6Lffu18jAAAAAJ7bvp5jzgHTDOurd2X4RiCykYcg"></div> <!-- key -->
+                                
                                 <div class="mb-3"><button class="btn btn-primary shadow d-block w-100" name="LoginSubmit" type="submit">Log in</button></div>
                                 <p class="text-muted">Forgot your password?</p>
                             </form>
