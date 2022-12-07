@@ -30,8 +30,23 @@
             header("Location: kernel.php");
         }
     }
+
+
+    session_start();
+    include_once("../Controllers/HomeController.php");
+
+    if(isset($_SESSION["userLogin"])){
+        header("Location: ../Views/dashboard.php");
+    }else{
+        echo "no login session";
+    }
+
 ?>
 
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -51,7 +66,7 @@
                         <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
                     </svg></span><span>Brand</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
-                <!-- <ul class="navbar-nav mx-auto"></ul><a class="btn btn-primary shadow" role="button" href="signup.html">Sign up</a> -->
+                <ul class="navbar-nav mx-auto"></ul><a class="btn btn-primary shadow" role="button" href="../Views/register.php">Sign up</a>
             </div>
         </div>
     </nav>

@@ -4,28 +4,33 @@ class HomeModel{
     public $db;
 
     public function check_user_login($useremail, $password){
-        $query = "SELECT count(*) FROM member WHERE email='{$useremail}' AND password='{$password}' ";
+        // $query = "SELECT count(*) FROM mebmer WHERE email=:useremail AND password = :password";
+        $query = "SELECT id FROM manager WHERE email='{$useremail}' AND password='{$password}'";
 
-        $stmt = $this->db->prepare($query)->execute();
-        // print_r($stmt);
-        echo "登入成功";
+        $stmt = $this->db->query($query);
+        // $this->db->bind(":useremail", $useremail);
+        // $this->db->bind(":password", $password);
 
-        echo $stmt;
-
+        print_r($stmt);
+        exit;
+        // echo "登入成功";
+        // echo $query;
+        // echo $stmt;
         // exit;
+
         return $stmt;
     }
     
+    public function check_admin_login($useremail, $password){
+        $query = "SELECT count(*) FROM manager WHERE email='{$useremail}' AND password='{$password}'";
+
+        $stmt = $this->db->prepare($query)->execute();
+        return $stmt;
+    }
+
     public function UserRegister($name, $email, $password){
 
-        // $query = "INSERT INTO member(name,email,password) VALUES('".$name."','".$email."','".$password."')";
-        // // echo "test is good";
-        // $stmt = $this->db->query($query);
         
-        
-
-        // return 1;
-    
         $check="SELECT * FROM member WHERE email='".$email."'";
         $stmt = $this->db->query($check);
         echo $stmt->rowCount();

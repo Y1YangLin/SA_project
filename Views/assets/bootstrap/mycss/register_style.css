@@ -1,0 +1,10 @@
+.valid{
+    border:2px solid green;
+}
+.invalid{
+    border:2px solid red;
+}
+
+#ppp{
+    color:red;
+}

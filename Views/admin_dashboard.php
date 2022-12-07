@@ -1,16 +1,16 @@
 <?php
 
-?>
 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Shopping Cart - Brand</title>
+    <title>Team - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.reflowhq.com/v2/toolkit.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
 </head>
 
@@ -21,22 +21,32 @@
                         <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
                     </svg></span><span>Brand</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav mx-auto"></ul>
-                <!-- <a class="btn btn-primary shadow" role="button" href="signup.html">Logout</a> -->
+                <!-- <ul class="navbar-nav mx-auto"></ul><a class="btn btn-primary shadow" role="button" href="signup.html">Logout</a> -->
+                
                 <form method="get" action="../kernel.php">
                     <button class="btn btn-primary shadow" role="button" type="submit" name="logout">Logout</button>
                 </form>
+
             </div>
         </div>
     </nav>
     <section class="py-5">
         <div class="container py-5">
-            <h1>登入後的首頁</h1>
-            <div class="row mx-auto">
-                <div class="col">
-                    <div data-reflow-type="shopping-cart"></div>
+            <div class="row mb-4 mb-lg-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <p class="fw-bold text-success mb-2">管理員頁面</p>
+                    <h2 class="fw-bold">你現在是大哥</h2>
+                    <p class="text-muted">No matter the project, our team can handle it.&nbsp;</p>
                 </div>
             </div>
+            <div class="row row-cols-2 row-cols-md-3 mx-auto" style="max-width: 700px;">
+                <div class="col"><button class="btn btn-primary" type="button">新增</button></div>
+                <div class="col"><button class="btn btn-primary" type="button">刪除</button></div>
+                <div class="col-md-3"><button class="btn btn-primary" type="button" style="margin-right: -14px;">檢視所有會員</button></div>
+            </div>
+        </div>
+        <div class="row row-cols-2 row-cols-md-3 mx-auto" style="max-width: 700px;">
+            <div class="col"><button class="btn btn-primary" type="button">新增管理者</button></div>
         </div>
     </section>
     <footer class="bg-primary-gradient">
@@ -92,8 +102,6 @@
         </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdn.reflowhq.com/v2/toolkit.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/bold-and-bright.js"></script>
 </body>
 

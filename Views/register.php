@@ -12,6 +12,7 @@
     <title>Sign up - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="./assets/bootstrap/mycss/register_style.css">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                         <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
                     </svg></span><span>Brand</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav mx-auto"></ul><a class="btn btn-primary shadow" role="button" href="register.php">Sign up</a>
+                <!-- <ul class="navbar-nav mx-auto"></ul><a class="btn btn-primary shadow" role="button" href="register.php">Sign up</a> -->
             </div>
         </div>
     </nav>
@@ -41,13 +42,56 @@
                                     <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
                                 </svg></div>
                             <form method="post" action="../kernel.php">
-                                <div class="mb-3"><input class="form-control" type="text" name="name" placeholder="name"></div>
-                                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="email"></div>
-                                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="password"></div>
+                                <div class="mb-3"><input class="form-control" type="text" name="name" placeholder="name"><p id="ppp"></p></div>
+                                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="email"><p id="ppp"></p></div>
+                                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="password" minlength="8" ><p id="ppp"></p></div>
+                                <div class="mb-3"><input class="form-control" type="text" name="address" placeholder="address" required><p id="ppp"></p></div>
                                 <div class="mb-3"><button class="btn btn-primary shadow d-block w-100" type="submit" name="RegisterSubmit">Sign up</button></div>
-                                <!-- <div class="mb-3"><input class="form-control" type="submit" name="RegisterSubmit" value="submit"></div> -->
+                                
+                                
+
                                 <p class="text-muted">Already have an account?&nbsp;<a href="login.php">Log in</a></p>
+                            
+                                
+                            
                             </form>
+                            <script>
+                                var inputs=document.querySelectorAll('input');
+        
+                                inputs.forEach(input=>{
+                                    input.addEventListener('change',function(){
+
+                                        const parent=input.parentElement;
+                                        // var val=input["password"].value;
+                                        const p=parent.querySelector('p');
+                                        
+                                        p.innerHTML="";
+                                            
+                                        input.setCustomValidity('');
+                                        if(input.checkValidity()){
+                                            input.classList.remove('invalid');
+                                            input.classList.add('valid');
+                                            
+                                        }else{
+                                            input.classList.remove('valid');
+                                            input.classList.add('invalid');
+
+                                            if(input.validity.valueMissing){
+                                                input.setCustomValidity("此欄位必填!!");
+                                            }
+                                            if(input.validity.typeMismatch){
+                                                input.setCustomValidity("格式錯誤!!");
+                                            }
+                                            if(input.validity.tooShort){
+                                                input.setCustomValidity("密碼長度不足");
+                                            }
+
+                                            p.innerHTML=input.validationMessage;
+                                            
+                                        }
+                                    })
+                                })
+                            </script>
                         </div>
                     </div>
                 </div>

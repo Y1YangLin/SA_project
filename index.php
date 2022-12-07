@@ -2,7 +2,9 @@
 
 include_once("kernel.php");
 
-
+if(isset($_SESSION["userLogin"])){
+    header("Location: ../Views/dashboard.php");
+}
 
 
 ?>
@@ -26,7 +28,12 @@ include_once("kernel.php");
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html"></a></li>
-                </ul><a class="btn btn-primary shadow" role="button" href="./Views/register.php">Sign up</a><a href="./Views/login.php"><button class="btn btn-primary" type="button">Login</button></a>
+                </ul>
+                <a class="btn btn-primary shadow" role="button" href="./Views/register.php">Sign up</a>
+                <!-- <a href="./Views/login.php"><button class="btn btn-primary" type="button">Login</button></a> -->
+                <form method="get" action="../kernel.php">
+                    <button class="btn btn-primary shadow" role="button" type="submit" name="login">Login</button>
+                </form>
             </div>
         </div>
     </nav>
@@ -41,9 +48,9 @@ include_once("kernel.php");
                 </div>
                 <div class="col-12 col-lg-10 mx-auto">
                     <div class="position-relative" style="display: flex;flex-wrap: wrap;justify-content: flex-end;">
-                        <div style="position: relative;flex: 0 0 45%;transform: translate3d(-15%, 35%, 0);"><img class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.8" src="assets/img/products/3.jpg"></div>
-                        <div style="position: relative;flex: 0 0 45%;transform: translate3d(-5%, 20%, 0);"><img class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.4" src="assets/img/products/2.jpg"></div>
-                        <div style="position: relative;flex: 0 0 60%;transform: translate3d(0, 0%, 0);"><img class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.25" src="assets/img/products/1.jpg"></div>
+                        <div style="position: relative;flex: 0 0 45%;transform: translate3d(-15%, 35%, 0);"><img class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.8" src="../assets/img/3.jpg"></div>
+                        <div style="position: relative;flex: 0 0 45%;transform: translate3d(-5%, 20%, 0);"><img class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.4" src="../assets/img/2.png"></div>
+                        <div style="position: relative;flex: 0 0 60%;transform: translate3d(0, 0%, 0);"><img class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.25" src="../assets/img/1.png"></div>
                     </div>
                 </div>
             </div>
