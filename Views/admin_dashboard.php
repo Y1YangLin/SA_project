@@ -1,18 +1,17 @@
 <?php
 
 
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Sign up - Brand</title>
+    <title>Team - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
-    <link rel="stylesheet" href="./assets/bootstrap/mycss/register_style.css">
 </head>
 
 <body>
@@ -22,7 +21,12 @@
                         <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
                     </svg></span><span>Brand</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
-                <!-- <ul class="navbar-nav mx-auto"></ul><a class="btn btn-primary shadow" role="button" href="register.php">Sign up</a> -->
+                <!-- <ul class="navbar-nav mx-auto"></ul><a class="btn btn-primary shadow" role="button" href="signup.html">Logout</a> -->
+                
+                <form method="get" action="../kernel.php">
+                    <button class="btn btn-primary shadow" role="button" type="submit" name="logout">Logout</button>
+                </form>
+
             </div>
         </div>
     </nav>
@@ -30,72 +34,19 @@
         <div class="container py-5">
             <div class="row mb-4 mb-lg-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <p class="fw-bold text-success mb-2">Sign up</p>
-                    <h2 class="fw-bold">抽一個註冊</h2>
+                    <p class="fw-bold text-success mb-2">管理員頁面</p>
+                    <h2 class="fw-bold">你現在是大哥</h2>
+                    <p class="text-muted">No matter the project, our team can handle it.&nbsp;</p>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6 col-xl-4">
-                    <div class="card">
-                        <div class="card-body text-center d-flex flex-column align-items-center">
-                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary shadow bs-icon my-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person">
-                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
-                                </svg></div>
-                            <form method="post" action="../kernel.php">
-                                <div class="mb-3"><input class="form-control" type="text" name="name" placeholder="name"><p id="ppp"></p></div>
-                                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="email"><p id="ppp"></p></div>
-                                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="password" minlength="8" ><p id="ppp"></p></div>
-                                <div class="mb-3"><input class="form-control" type="text" name="address" placeholder="address" required><p id="ppp"></p></div>
-                                <div class="mb-3"><button class="btn btn-primary shadow d-block w-100" type="submit" name="RegisterSubmit">Sign up</button></div>
-                                
-                                
-
-                                <p class="text-muted">Already have an account?&nbsp;<a href="login.php">Log in</a></p>
-                            
-                                
-                            
-                            </form>
-                            <script>
-                                var inputs=document.querySelectorAll('input');
-        
-                                inputs.forEach(input=>{
-                                    input.addEventListener('change',function(){
-
-                                        const parent=input.parentElement;
-                                        // var val=input["password"].value;
-                                        const p=parent.querySelector('p');
-                                        
-                                        p.innerHTML="";
-                                            
-                                        input.setCustomValidity('');
-                                        if(input.checkValidity()){
-                                            input.classList.remove('invalid');
-                                            input.classList.add('valid');
-                                            
-                                        }else{
-                                            input.classList.remove('valid');
-                                            input.classList.add('invalid');
-
-                                            if(input.validity.valueMissing){
-                                                input.setCustomValidity("此欄位必填!!");
-                                            }
-                                            if(input.validity.typeMismatch){
-                                                input.setCustomValidity("格式錯誤!!");
-                                            }
-                                            if(input.validity.tooShort){
-                                                input.setCustomValidity("密碼長度不足");
-                                            }
-
-                                            p.innerHTML=input.validationMessage;
-                                            
-                                        }
-                                    })
-                                })
-                            </script>
-                        </div>
-                    </div>
-                </div>
+            <div class="row row-cols-2 row-cols-md-3 mx-auto" style="max-width: 700px;">
+                <div class="col"><button class="btn btn-primary" type="button">新增</button></div>
+                <div class="col"><button class="btn btn-primary" type="button">刪除</button></div>
+                <div class="col-md-3"><button class="btn btn-primary" type="button" style="margin-right: -14px;">檢視所有會員</button></div>
             </div>
+        </div>
+        <div class="row row-cols-2 row-cols-md-3 mx-auto" style="max-width: 700px;">
+            <div class="col"><button class="btn btn-primary" type="button">新增管理者</button></div>
         </div>
     </section>
     <footer class="bg-primary-gradient">

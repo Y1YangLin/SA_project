@@ -23,11 +23,9 @@ $model = new HomeModel();
 $load_new->model = $model;
 $model->db = $db;
 
-$login_status = $load_new->is_login();
 
-// if($login_status){
-//     return header("Location: ../Views/dashboard.php");
-// }
+// $admin_model = new AdminModel();
+
 
 $index = $load_new->indexAction();
 
