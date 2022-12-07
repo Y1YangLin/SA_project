@@ -2,7 +2,9 @@
 
 include_once("kernel.php");
 
-
+if(isset($_SESSION["userLogin"])){
+    header("Location: ../Views/dashboard.php");
+}
 
 
 ?>
@@ -28,7 +30,10 @@ include_once("kernel.php");
                     <li class="nav-item"><a class="nav-link active" href="index.html"></a></li>
                 </ul>
                 <a class="btn btn-primary shadow" role="button" href="./Views/register.php">Sign up</a>
-                <a href="./Views/login.php"><button class="btn btn-primary" type="button">Login</button></a>
+                <!-- <a href="./Views/login.php"><button class="btn btn-primary" type="button">Login</button></a> -->
+                <form method="get" action="../kernel.php">
+                    <button class="btn btn-primary shadow" role="button" type="submit" name="login">Login</button>
+                </form>
             </div>
         </div>
     </nav>

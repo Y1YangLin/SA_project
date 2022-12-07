@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,6 +31,7 @@
     </nav>
     <section class="py-5">
         <div class="container py-5">
+            <h1>登入後的首頁</h1>
             <div class="row mx-auto">
                 <div class="col">
                     <div data-reflow-type="shopping-cart"></div>

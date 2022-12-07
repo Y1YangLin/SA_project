@@ -5,12 +5,6 @@
 class HomeController{
     public $model;
 
-    // public function add_salt($password, $salt){
-    //     $hashed_password = "".$salt."".$password."";
-    //     return $hashed_password;
-
-    // }
-
     public function indexAction(){
 
     
@@ -56,14 +50,24 @@ class HomeController{
         }
 
         if(isset($_GET["register"])){
-            return require_once("./Views/register.php");
+            return header("Location: ../Views/register.php");
         }
 
-        if(isset($_GET["login"]) || isset($_GET["logout"])){
-            return require_once("./Views/login.php");
+        if(isset($_GET["login"])){
+            return header("Location: ../Views/login.php");
         }
 
-        return require_once("./index.php");
+        if(isset($_GET["logout"])){
+            return header("Location: ../index.php");
+        }
+
+        return header("Locatoin: ../index.php");
+    }
+
+    public function is_login(){
+        if(isset($_SESSION["userLogin"])){
+            return 1;
+        }
     }
 
 };

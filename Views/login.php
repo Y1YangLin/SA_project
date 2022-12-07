@@ -1,9 +1,16 @@
 <?php
-    // session_start();
-    
+session_start();
+include_once("../Controllers/HomeController.php");
 
+if(isset($_SESSION["userLogin"])){
+    header("Location: ../Views/dashboard.php");
+}else{
+    echo "no login session";
+}
 ?>
 
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>

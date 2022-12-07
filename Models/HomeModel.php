@@ -18,14 +18,7 @@ class HomeModel{
     
     public function UserRegister($name, $email, $password){
 
-        // $query = "INSERT INTO member(name,email,password) VALUES('".$name."','".$email."','".$password."')";
-        // // echo "test is good";
-        // $stmt = $this->db->query($query);
         
-        
-
-        // return 1;
-    
         $check="SELECT * FROM member WHERE email='".$email."'";
         $stmt = $this->db->query($check);
         echo $stmt->rowCount();
