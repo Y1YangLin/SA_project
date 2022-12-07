@@ -23,13 +23,13 @@
     }
 
 
-    if(isset($_POST['g-recaptcha-response'])){
-        if(recaptchaCheck($_POST['g-recaptcha-response'])==0 ){
-            echo "<script>alert('Your are fucking robot');</script>"; 
-        }else{
-            header("Location: kernel.php");
-        }
-    }
+    // if(isset($_POST['g-recaptcha-response'])){
+    //     if(recaptchaCheck($_POST['g-recaptcha-response'])==0 ){
+    //         echo "<script>alert('Your are fucking robot');</script>"; 
+    //     }else{
+    //         header("Location: kernel.php");
+    //     }
+    // }
 
 
     session_start();

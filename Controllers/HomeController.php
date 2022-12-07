@@ -56,29 +56,29 @@ class HomeController{
     public function routeManager(){
 
         if(isset($_SESSION["userLogin"])){
-            return header("Location: ../Views/dashboard.php");
+            return header("Location: ./Views/dashboard.php");
         }
 
         if(isset($_SESSION["adminLogin"])){
             // echo "admin test";
-            return header("Location: ../Views/admin_dashboard.php");
+            return header("Location: ./Views/admin_dashboard.php");
         }
 
         if(isset($_GET["register"])){
-            return header("Location: ../Views/register.php");
+            return header("Location: ./Views/register.php");
         }
 
         if(isset($_GET["login"])){
-            return header("Location: ../Views/login.php");
+            return header("Location: ./Views/login.php");
         }
 
         if(isset($_GET["logout"])){
-            return header("Location: ../index.php");
+            return header("Location: ./index.php");
         }
 
         
 
-        return header("Locatoin: ../index.php");
+        return header("Location: ./index.php");
     }
 
     public function is_login(){ //有bug
