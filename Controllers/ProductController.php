@@ -7,6 +7,12 @@ class ProductController{
         echo "its the class getProductAction";
     }
 
+
+
+    public function routeManager(){
+
+
+    }    
 };
 
 
