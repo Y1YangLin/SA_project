@@ -1,0 +1,10 @@
+div.jumbotron h1.hero-technology {
+  color: #fff;
+  text-align: center;
+  background: url('../../assets/img/depositphotos_192074332-stock-photo-makeup-products-with-cosmetic-bag.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
