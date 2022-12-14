@@ -1,5 +1,5 @@
 <?php
-session_start();
+include "./include/session.inc.php";
 // header("content-type:text/html;charset=utf-8");
 
 
