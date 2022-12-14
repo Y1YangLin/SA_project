@@ -2,11 +2,11 @@
 
 class SignUpModel extends mysql{
 
-    public function setUser($name, $email, $pwd){
-        $stmt = $this->connect()->prepare("INSERT INTO member (name, email, password) VALUES(?, ?, ?)");
+    protected function setUser($name, $email, $pwd){
+        $stmt = $this->connect()->prepare("INSERT INTO member (name, email, password) VALUES(?, ?, ?) ");
         
         $hashed_pwd = password_hash($pwd, PASSWORD_DEFAULT);
-
+        
         if(!$stmt->execute(array($name, $email, $hashed_pwd))){
             $stmt = NULL;
             header('Location: ../index.php?error=stmtfailed');

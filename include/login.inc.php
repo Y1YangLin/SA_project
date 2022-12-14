@@ -13,15 +13,8 @@ include "../class/Controller/LoginController.php";
 
 $login = new LoginController($email, $upwd);
 
+$login->loginUser();
 
-
-
-if($login->loginUser()){
-    header('Location: ../class/dashboard.php');
-}else{
-    echo "login failed";
-}
-
-
+header('Location: ../class/dashboard.php?error=none');
 
 ?>

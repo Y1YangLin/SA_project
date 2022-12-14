@@ -21,6 +21,6 @@ $signup = new SignUpController($name, $pwd, $repwd, $email, $phone, $addr);
 
 $signup->signupUser(); 
 
-header('Location: ../class/dashboard.php');
+header('Location: ../class/dashboard.php?error=none');
 
 ?>

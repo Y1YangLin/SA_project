@@ -13,30 +13,19 @@ class LoginController extends LoginModel{
 
     public function loginUser(){
         
-        
         if($this->emptyInput() == false){
-            header('Location: ../index.php?error=EmptyInput');
-            exit;
+            header('location: ../class/login.php?error=emptyInput');
+            exit();
         }
 
         if($this->EmailInvalid() == false){
-            header('Location: ../index.php?error=WrongEmail');
-            exit;
-        }
-        // login model methods here
-
-        if($this->checkUser($this->email) == false){
-            header('Location : ../index.php?error=user_not_signup');
-            exit;
+            header('location: ../class/login.php?error=invalidemail');
+            exit();
         }
 
-        if($this->verify_Pwd($this->email, $this->pwd) == false){
-            header('Location : ../index.php?error=incorrect_pwd');
-            exit;
-        }
+        
 
-        echo "login success !";
-        return true;
+        $this->getUser($this->email, $this->pwd);
 
     }
 
@@ -57,10 +46,14 @@ class LoginController extends LoginModel{
         $result = NULL;
 
         if(empty($this->pwd) || empty($this->email)){
-            $this->result = false;
+            $result = false;
         }else{
-            $this->result = true;
+            $result = true;
         }
+
+        // echo $this->pwd . " " .$this->email;
+        // echo isset($this->email);
+        // exit();
         return $result;
     }
 

@@ -24,38 +24,35 @@ class SignUpController extends SignUpModel{
     public function signupUser(){
         
         if($this->emptyInput() == false){
-            header('Location : ../index.php?=emptyinput');
+            header('Location: ../class/Login.php?error=emptyinput');
             exit();
         }
         
-        if($this->PwdMatch() == false){ //sever 500
+        if($this->PwdMatch() == false){
             
-            header('Location : ../index.php?');
+            header('Location: ../class/Login.php?error=incorrectPwd');
             exit();
         }
-        
-        // echo "test";
-        // exit();
         
         if($this->NameInvalid() == false){
-            header('Location: ../index.php?=NametypeError');
+            header('Location: ../class/Login.php?error=NametypeError');
             exit();
         }
-
+        
         if($this->EmailInvalid() == false){
-            header('Location : ../index.php?=EmailError');
+            header('Location: ../class/Login.php?error=InvalidEmail');
             exit();
         }
-
+        
         if($this->checkUser($this->email)){
             echo "<b>該帳號已有人使用!<br>3秒後將自動跳轉頁面.....<br></b>";
-            echo "<a href='signup.html'>未成功跳轉頁面請點擊此</a>";
+            echo "<a href='../class/Login.php'>未成功跳轉頁面請點擊此</a>";
     
-            header("refresh:3;url=../index.php",true);
+            header("refresh:3;url=../class/Login.php",true);
             exit();
         }
-
-        // $this->SignUpModel::setUser($this->name,$this->email,$this->pwd);
+        
+        
         $this->setUser($this->name,$this->email,$this->pwd);
 
     }

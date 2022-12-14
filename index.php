@@ -1,6 +1,6 @@
 <?php
-header("content-type:text/html;charset=utf-8");
-
+session_start();
+// header("content-type:text/html;charset=utf-8");
 
 
 ?>
@@ -49,7 +49,17 @@ header("content-type:text/html;charset=utf-8");
                     <li class="nav-item"></li>
                 </ul>
                 <div class="dropdown show" style="margin-left: 763px;"><a class="dropdown-toggle fs-4 link-dark" aria-expanded="true" data-bs-toggle="dropdown" href="#" style="padding-bottom: 0px;margin-bottom: -1px;padding-top: 0px;margin-left: 44px;"><i class="fa fa-user"></i>&nbsp;</a>
-                    <div class="dropdown-menu dropdown-menu-end show" data-bs-popper="none"><a class="dropdown-item" href="./class/Login.php">註冊/登入</a></div>
+                    <div class="dropdown-menu dropdown-menu-end show" data-bs-popper="none">
+
+                        
+                        
+
+                        
+                        
+                        <a class="dropdown-item" href="./class/Login.php">註冊/登入</a>
+                        
+
+                    </div>
                 </div>
             </div>
         </div>

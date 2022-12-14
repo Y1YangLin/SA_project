@@ -1,6 +1,11 @@
 <?php
 header("content-type:text/html;charset=utf-8");
 
+
+if(isset($_SESSION['user_name']) || isset($_SESSION['user_email'])){
+   header('Location: ./class/dashboard?error=none');
+   exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
