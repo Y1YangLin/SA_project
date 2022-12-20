@@ -9,9 +9,12 @@
 
     // include_once '';
 
-    // Autoload Core Libraries 
     spl_autoload_register(function($className){
+        // echo 'className : ' . $className;
+        
         require_once 'libraries/' . $className .'.php';
     });
+
+    // exit;
 ?>
 

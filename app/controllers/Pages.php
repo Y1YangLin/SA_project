@@ -6,19 +6,17 @@
 
         public function index(){
             $data = [
-                'title' => 'Welcome'
+                // 'title' => 'Welcome'
             ];
 
             $this->view('pages/index', $data);
         }
 
-        public function about() { 
-            $this->view('pages/about');
-        }
-
         public function dashboard(){
             $this->view('pages/dashboard');
         }
+
+        
 
     }
 
