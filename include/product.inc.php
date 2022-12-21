@@ -1,7 +1,7 @@
 <?php
 include "../dbh.php";
-include "../../ProductModel.php";
-include "../../ProductController.php";
+include "../class/Model/ProductModel.php";
+include "../class/Controller/ProductController.php";
 
 
 $attr=explode("/",$_SERVER["REQUEST_URI"]);

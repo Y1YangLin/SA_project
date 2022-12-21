@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>產品頁面</title>
+    <link rel="stylesheet" href="product_assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
+    <link rel="stylesheet" href="product_assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="product_assets/css/aos.min.css">
+    <link rel="stylesheet" href="product_assets/css/Black-Navbar.css">
+    <link rel="stylesheet" href="product_assets/css/Footer-Dark-Multi-Column-icons.css">
+    <link rel="stylesheet" href="product_assets/css/Gamanet_Header_v1.css">
+    <link rel="stylesheet" href="product_assets/css/Hero-Carousel-images.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="product_assets/css/Ludens-Client---Login-Dropdown.css">
+    <link rel="stylesheet" href="product_assets/css/Pricing-Yearly--Monthly-badges.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md fixed-top fs-6 text-bg-light navbar-fixed-top navigation-clean-button"
+        style="background: rgb(34, 34, 34);border-radius: 20;border-top-left-radius: 20;border-top-right-radius: 20;border-bottom-right-radius: 20;border-bottom-left-radius: 20;border-style: none;padding-bottom: 0px;padding-top: 0px;">
+        <div class="container">
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+                <span class="visually-hidden">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div><a class="navbar-brand" href="../index.php"><span class="fw-bold"
+                        style="margin-left: 0px;">YOFU</span> </a></div>
+            <div class="collapse navbar-collapse" id="navcol-1"
+                style="color: rgb(255,255,255);margin-right: -3px;padding-left: 11px;margin-left: 6px;">
+                <ul class="navbar-nav nav-right" style="padding-left: 58px;margin-left: 51px;">
+                    <li class="nav-item" style="margin-left: 4px;margin-right: 4px;"><a
+                            class="nav-link active link-dark" href="首頁_登入後.html"
+                            style="color: rgba(224,217,217,0.9);padding-left: 0px;padding-right: 0px;margin-right: 14px;margin-left: -102px;">首頁</a>
+                    </li>
+                    <li class="nav-item" style="margin-left: -13px;margin-right: 0px;"><a class="nav-link link-dark"
+                            href="about.html"
+                            style="color: rgba(224,217,217,0.9);padding-right: 0px;padding-left: 0px;margin-right: 9px;margin-left: -49px;">產品</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link link-dark" href="faq.html"
+                            style="color: rgba(224,217,217,0.9);padding-left: 10px;padding-right: 18px;margin-right: 1px;margin-left: -2px;">FAQ</a>
+                    </li>
+                    <li class="nav-item"></li>
+                </ul>
+                <div class="dropdown"><a
+                        class="dropdown-toggle link-dark d-xl-flex justify-content-xl-start align-items-xl-center"
+                        aria-expanded="false" data-bs-toggle="dropdown" href="#"
+                        style="color: rgba(224,217,217,0.9);">服務</a>
+                    <div class="dropdown-menu"><a class="dropdown-item" href="services.html">膚質分析</a><a
+                            class="dropdown-item" href="#">商品比價</a></div>
+                </div>
+                <div class="dropdown"><a
+                        class="dropdown-toggle link-dark d-xl-flex justify-content-xl-start align-items-xl-center"
+                        aria-expanded="false" data-bs-toggle="dropdown" href="#"
+                        style="color: rgba(224,217,217,0.9);padding-left: 0px;margin-right: -12px;margin-left: 12px;">價格排序</a>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item high" name="sort" onclick="sort(1)">由高到低</button>
+                        <button class="dropdown-item" name="sort" onclick="sort(2)">由低到高</button>
+                    </div>
+                </div>
+                <div class="dropdown" style="padding-left: 1px;margin-right: 190px;margin-left: 701px;"><a
+                        class="dropdown-toggle fs-4 link-dark" aria-expanded="false" data-bs-toggle="dropdown" href="#"
+                        style="padding-bottom: 0px;margin-bottom: -1px;padding-top: 0px;margin-left: 5px;"><i
+                            class="fa fa-user-circle" style="padding-left: 0px;"></i>&nbsp;</a>
+                    <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#">更改會員資料</a><a
+                            class="dropdown-item" href="#">登出</a></div>
+                </div>
+                <div class="container pb-5 pt-5"
+                    style="padding-top: 68px;margin-top: -2px;padding-bottom: 0px;margin-bottom: -131px;margin-left: -1119px;margin-right: 359px;">
+                    <div class="col-md-9 col-xl-8 ml-auto mr-auto" style="margin-left: 147px;">
+                        <form action="./product2.html" method="GET">
+                            <div class="align-items-center form-row">
+                                <div class="col-sm-auto text-end form-group mb-3"
+                                    style="margin-right: -94px;margin-bottom: -18px;padding-left: 0px;margin-left: -1px;padding-bottom: 0px;padding-top: 5px;margin-top: -15px;">
+                                    <button class="btn btn-secondary text-bg-dark ps-4 pe-4 rounded-pill" type="submit"
+                                        style="margin-left: 2px;margin-right: 3px;"><i
+                                            class="fa fa-search"></i></button></div>
+                                <div class="col-sm form-group mb-3">
+                                    <input class="form-control form-control ps-4 pe-4 rounded-pill" type="text"
+                                        name="search-key" placeholder="Search..."
+                                        style="margin-left: -2px;padding-left: 467px;padding-right: 0px;margin-right: 1px;margin-bottom: -51px;margin-top: -51px;padding-bottom: 3px;">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="w3-main w3-content w3-padding"
+        style="max-width: 100%;margin-left: -76px;margin-top: 86px;margin-right: 0px;padding-right: 0px;padding-bottom: 0px;margin-bottom: 0px;">
+        <div class="carousel slide" data-bs-ride="carousel" id="carousel-1"
+            style="height: 600px;padding-right: 0px;margin-right: -76px;padding-top: 4px;padding-bottom: 0px;margin-bottom: 74px;margin-top: -47px;padding-left: 0px;margin-left: -129px;">
+            <div class="carousel-inner h-100" style="margin-top: -47px;">
+                <div class="carousel-item active h-100" style="padding-left: 77px;margin-left: -32px;"><img
+                        class="w-100 d-block position-absolute h-100 fit-cover" src="product_assets/img/1.png" alt="Slide Image"
+                        style="z-index: -1;margin-right: 1px;margin-left: 82px;">
+                    <div class="container d-flex flex-column justify-content-center h-100"
+                        style="margin-left: 71px;padding-left: 0px;margin-right: 21px;padding-bottom: 0px;margin-top: -2px;margin-bottom: 0px;">
+                        <div class="row" style="margin-right: -155px;">
+                            <div class="col-md-6 col-xl-4 offset-md-2">
+                                <div style="max-width: 350px;">
+                                    <h1 class="text-uppercase fw-bold text-white">Biben dum<br>fringi dictum, augue
+                                        purus</h1>
+                                    <p class="fw-lighter text-white my-3">Tincidunt laoreet leo, adipiscing taciti
+                                        tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p><a
+                                        class="btn btn-primary fs-6 fw-bold text-bg-light me-2" role="button"
+                                        href="#">瀏覽更多</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100" style="padding-left: 77px;margin-right: -1468px;padding-right: 0px;margin-left: 3px;">
+                    <img class="w-100 d-block position-absolute h-100 fit-cover" src="product_assets/img/2.png" alt="Slide Image" style="z-index: -1;">
+                    <div class="container d-flex flex-column justify-content-center h-100">
+                        <div class="row" style="padding-right: 0px;margin-right: -134px;">
+                            <div class="col-md-6 col-xl-4 offset-md-2">
+                                <div style="max-width: 350px;">
+                                    <h1 class="text-uppercase fw-bold text-white">Biben dum<br>fringi dictum, augue
+                                        purus</h1>
+                                    <p class="fw-lighter text-white my-3">Tincidunt laoreet leo, adipiscing taciti
+                                        tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p><a
+                                        class="btn btn-primary fs-6 fw-bold text-bg-light me-2" role="button"
+                                        href="#">瀏覽更多</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100" style="padding-left: 77px;margin-left: 1px;"><img
+                        class="w-100 d-block position-absolute h-100 fit-cover" src="product_assets/img/2.png" alt="Slide Image"
+                        style="z-index: -1;">
+                    <div class="container d-flex flex-column justify-content-center h-100">
+                        <div class="row" style="margin-right: -131px;">
+                            <div class="col-md-6 col-xl-4 offset-md-2">
+                                <div style="max-width: 350px;">
+                                    <h1 class="text-uppercase fw-bold text-white">Biben dum<br>fringi dictum, augue
+                                        purus</h1>
+                                    <p class="fw-light text-light my-3">Tincidunt laoreet leo, adipiscing taciti tempor.
+                                        Primis senectus sapien, risus donec ad fusce augue interdum.</p><a
+                                        class="btn btn-primary fw-bold text-bg-light me-2" role="button"
+                                        href="#">瀏覽更多</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"
+                    style="margin-bottom: 94px;margin-top: -324px;padding-top: 0px;padding-bottom: 178px;margin-right: -16px;margin-left: 164px;"><span
+                        class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a
+                    class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"
+                    style="margin-left: 0px;margin-right: 12px;margin-bottom: 372px;margin-top: -300px;"><span
+                        class="carousel-control-next-icon" style="margin-left: 106px;"></span><span
+                        class="visually-hidden">Next</span></a></div>
+            <ol class="carousel-indicators" style="padding-left: 137px;margin-top: 0px;margin-bottom: 106px;">
+                <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+            </ol>
+        </div>
+        <section class="photo-gallery py-4 py-xl-5"
+            style="margin-top: -202px;padding-left: 0px;padding-right: 56px;margin-left: 165px;margin-right: -44px;">
+            <div class="container py-4 py-xl-5">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col product" data-aos="fade-up" data-aos-duration="800"
+                        style="margin-bottom: 31px;padding-bottom: 0px;">
+                        <!-- <div>
+                            <img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="assets/img/商品照1.jpg">
+                            <div class="py-4" style="margin-bottom: -24px;">
+                                <h4 class="fw-bold">Lorem libero donec</h4>
+                                <p class="fs-6">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                <h4 class="display-5 fw-bold" style="margin-bottom: 28px;">$38<span class="fs-3 fw-normal text-muted">/mo</span></h4>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="col product" data-aos="fade-up" data-aos-duration="800">
+                        <!-- <div>
+                            <img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="assets/img/商品照2.jpg">
+                            <div class="py-4">
+                                <h4 class="fw-bold">Lorem libero donec</h4>
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                <h4 class="display-5 fw-bold">$38<span class="fs-3 fw-normal text-muted">/mo</span></h4>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="col product" data-aos="fade-up" data-aos-duration="800">
+                        <!-- <div>
+                            <img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="assets/img/商品照3.jpg">
+                            <div class="py-4">
+                                <h4 class="fw-bold">Lorem libero donec</h4>
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                <h4 class="display-5 fw-bold">$38<span class="fs-3 fw-normal text-muted">/mo</span></h4>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col product" data-aos="fade-up" data-aos-duration="800">
+                        <!-- <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="assets/img/800x.jpg">
+                            <div class="py-4" style="margin-bottom: 67px;">
+                                <h4 class="fw-bold">Lorem libero donec</h4>
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                <h4 class="display-5 fw-bold">$38<span class="fs-3 fw-normal text-muted">/mo</span></h4>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="col product" data-aos="fade-up" data-aos-duration="800">
+                        <!-- <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="assets/img/商品照5.jpeg">
+                            <div class="py-4">
+                                <h4 class="fw-bold">Lorem libero donec</h4>
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                <h4 class="display-5 fw-bold">$38<span class="fs-3 fw-normal text-muted">/mo</span></h4>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="col product" data-aos="fade-up" data-aos-duration="800">
+                        <!-- <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="assets/img/商品照6.jpg">
+                            <div class="py-4">
+                                <h4 class="fw-bold">Lorem libero donec</h4>
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                <h4 class="display-5 fw-bold">$38<span class="fs-3 fw-normal text-muted">/mo</span></h4>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col product" data-aos="fade-up" data-aos-duration="800">
+                        <!-- <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="assets/img/商品照7.webp" width="230" height="230">
+                            <div class="py-4" style="margin-bottom: 44px;">
+                                <h4 class="fw-bold">Lorem libero donec</h4>
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                <h4 class="display-5 fw-bold">$38<span class="fs-3 fw-normal text-muted">/mo</span></h4>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="col product" data-aos="fade-up" data-aos-duration="800">
+                        <!-- <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="assets/img/商品照8.webp">
+                            <div class="py-4">
+                                <h4 class="fw-bold">Lorem libero donec</h4>
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                <h4 class="display-5 fw-bold">$38<span class="fs-3 fw-normal text-muted">/mo</span></h4>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="col product" data-aos="fade-up" data-aos-duration="800">
+                        <!-- <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="assets/img/商品照9.jpg">
+                                <div class="py-4">
+                                    <h4 class="fw-bold">Lorem libero donec</h4>
+                                    <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                    <h4 class="display-5 fw-bold">$38<span class="fs-3 fw-normal text-muted">/mo</span></h4>
+                                </div>
+                            </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="col">
+            <div class="w3-center w3-padding-32" style="margin-top: -109px;margin-left: 45px;">
+                <div class="w3-bar"
+                    style="margin-bottom: 2px;margin-top: 83px;margin-left: 53%;padding-left: 0px;width: 50%;">
+                    <a class="link-dark w3-bar-item w3-button w3-hover-black" onclick="page(-1)"
+                        style="margin-left: -34px;margin-right: 8px;">«</a>
+                    <a class="link-dark w3-bar-item w3-black w3-button" onclick="page(1)"
+                        style="margin-left: 7px;">1</a>
+                    <a class="link-dark w3-bar-item w3-button w3-hover-black" onclick="page(2)"
+                        style="margin-left: 15px;">2</a>
+                    <a class="link-dark w3-bar-item w3-button w3-hover-black" onclick="page(3)"
+                        style="margin-left: 15px;">3</a>
+                    <a class="link-dark w3-bar-item w3-button w3-hover-black" onclick="page(4)"
+                        style="margin-left: 15px;">4</a>
+                    <a class="link-dark w3-bar-item w3-button w3-hover-black" onclick="page(-2)"
+                        style="margin-left: 15px;">»</a>
+                </div>
+            </div>
+        </div>
+        <hr id="about" style="padding-left: 0px;margin-left: 149px;">
+        <div class="col" data-aos="fade-up" data-aos-duration="800" style="margin-left: 3%;">
+            <div data-aos="fade-up" data-aos-duration="800" class="w3-container w3-padding-32 w3-center">
+                <h3 style="margin-left: 50%;width: 50%;">關於 YOFU</h3><br>
+                <div class="col"
+                    style="flex: 0 0 auto;width: 70%;margin-left: 6.5%;margin-right: 50%;padding-left: 0px;padding-right: 0px;">
+                    <section>
+                        <div
+                            style="height: 600px;background: url(&quot;product_assets/img/AL_25613.jpg&quot;) center / cover;margin-left: 228px;padding-bottom: 64px;margin-top: -2px;margin-right: -123px;margin-bottom: 38px;">
+                        </div>
+                    </section>
+                </div>
+                <div class="w3-padding-32">
+                    <h4 style="padding-left: 0px;margin-left: 50%;"><b
+                            style="margin-left: 0%;margin-bottom: 0px;margin-top: 0px;width: 50%;">目標理念</b></h4>
+                    <p
+                        style="margin-bottom: 46px;padding-left: 0px;padding-right: 0px;margin-right: -2px;margin-left: 27.5%;width: 60%;">
+                        期望藉由顧客的問卷、瀏覽紀錄和喜愛商品等資料，推薦適合使用者膚質和臉型的化妝品和保養品</p>
+                </div>
+            </div>
+        </div>
+        <footer class="text-white bg-dark"
+            style="margin-left: 74px;margin-right: -76px;padding-top: 0px;margin-top: 1px;padding-bottom: 0px;margin-bottom: -3px;">
+            <div class="container py-4 py-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
+                        <h3 class="fs-6 text-white">Products</h3>
+                        <ul class="list-unstyled">
+                            <li><a class="link-light" href="#">化妝水</a></li>
+                            <li><a class="link-light" href="#">精華液</a></li>
+                            <li><a class="link-light" href="#">乳液</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
+                        <ul class="list-unstyled">
+                            <li style="padding-top: 0px;margin-top: 0px;"><a class="link-light" href="#">乳霜</a></li>
+                            <li><a class="link-light" href="#">妝前乳</a></li>
+                            <li><a class="link-light" href="#">粉底液</a></li>
+                            <li><a class="link-light" href="#">定裝噴霧</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
+                        <h3 class="fs-6 text-white">Services</h3>
+                        <ul class="list-unstyled">
+                            <li><a class="link-light" href="#">膚質分析</a></li>
+                            <li><a class="link-light" href="#">商品比價</a></li>
+                        </ul>
+                    </div>
+                    <div
+                        class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
+                        <div class="fw-bold d-flex align-items-center mb-2"><span
+                                class="bs-icon-sm bs-icon-rounded bs-icon-primary text-bg-light d-flex justify-content-center align-items-center bs-icon me-2"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                    viewBox="0 0 16 16" class="bi bi-snapchat fs-5">
+                                    <path
+                                        d="M15.943 11.526c-.111-.303-.323-.465-.564-.599a1.416 1.416 0 0 0-.123-.064l-.219-.111c-.752-.399-1.339-.902-1.746-1.498a3.387 3.387 0 0 1-.3-.531c-.034-.1-.032-.156-.008-.207a.338.338 0 0 1 .097-.1c.129-.086.262-.173.352-.231.162-.104.289-.187.371-.245.309-.216.525-.446.66-.702a1.397 1.397 0 0 0 .069-1.16c-.205-.538-.713-.872-1.329-.872a1.829 1.829 0 0 0-.487.065c.006-.368-.002-.757-.035-1.139-.116-1.344-.587-2.048-1.077-2.61a4.294 4.294 0 0 0-1.095-.881C9.764.216 8.92 0 7.999 0c-.92 0-1.76.216-2.505.641-.412.232-.782.53-1.097.883-.49.562-.96 1.267-1.077 2.61-.033.382-.04.772-.036 1.138a1.83 1.83 0 0 0-.487-.065c-.615 0-1.124.335-1.328.873a1.398 1.398 0 0 0 .067 1.161c.136.256.352.486.66.701.082.058.21.14.371.246l.339.221a.38.38 0 0 1 .109.11c.026.053.027.11-.012.217a3.363 3.363 0 0 1-.295.52c-.398.583-.968 1.077-1.696 1.472-.385.204-.786.34-.955.8-.128.348-.044.743.28 1.075.119.125.257.23.409.31a4.43 4.43 0 0 0 1 .4.66.66 0 0 1 .202.09c.118.104.102.26.259.488.079.118.18.22.296.3.33.229.701.243 1.095.258.355.014.758.03 1.217.18.19.064.389.186.618.328.55.338 1.305.802 2.566.802 1.262 0 2.02-.466 2.576-.806.227-.14.424-.26.609-.321.46-.152.863-.168 1.218-.181.393-.015.764-.03 1.095-.258a1.14 1.14 0 0 0 .336-.368c.114-.192.11-.327.217-.42a.625.625 0 0 1 .19-.087 4.446 4.446 0 0 0 1.014-.404c.16-.087.306-.2.429-.336l.004-.005c.304-.325.38-.709.256-1.047Zm-1.121.602c-.684.378-1.139.337-1.493.565-.3.193-.122.61-.34.76-.269.186-1.061-.012-2.085.326-.845.279-1.384 1.082-2.903 1.082-1.519 0-2.045-.801-2.904-1.084-1.022-.338-1.816-.14-2.084-.325-.218-.15-.041-.568-.341-.761-.354-.228-.809-.187-1.492-.563-.436-.24-.189-.39-.044-.46 2.478-1.199 2.873-3.05 2.89-3.188.022-.166.045-.297-.138-.466-.177-.164-.962-.65-1.18-.802-.36-.252-.52-.503-.402-.812.082-.214.281-.295.49-.295a.93.93 0 0 1 .197.022c.396.086.78.285 1.002.338.027.007.054.01.082.011.118 0 .16-.06.152-.195-.026-.433-.087-1.277-.019-2.066.094-1.084.444-1.622.859-2.097.2-.229 1.137-1.22 2.93-1.22 1.792 0 2.732.987 2.931 1.215.416.475.766 1.013.859 2.098.068.788.009 1.632-.019 2.065-.01.142.034.195.152.195a.35.35 0 0 0 .082-.01c.222-.054.607-.253 1.002-.338a.912.912 0 0 1 .197-.023c.21 0 .409.082.49.295.117.309-.04.56-.401.812-.218.152-1.003.638-1.18.802-.184.169-.16.3-.139.466.018.14.413 1.991 2.89 3.189.147.073.394.222-.041.464Z">
+                                    </path>
+                                </svg></span><span>YOFU</span></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center pt-3">
+                    <p class="mb-0">2022 SA&nbsp; No.15</p>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+                                </path>
+                            </svg></li>
+                        <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                                <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+                                </path>
+                            </svg></li>
+                        <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                                </path>
+                            </svg></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="product_assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="product_assets/js/aos.min.js"></script>
+    <script src="product_assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src="product_assets/js/Gamanet_Header_v1.js"></script>
+    <script src="product_assets/js/Lightbox-Gallery.js"></script>
+
+
+    <script>
+        function sort(number) {
+            var url = location.href;
+            if (url.indexOf('?') != -1) {
+                var ary = url.split('?')[1].split('&');
+                param = "?" + ary[0] + "&" + ary[1] + "&sort=" + number;
+                url = url.split('?')[0];
+            }
+            window.location.href = url + param;
+        }
+
+        function page(num) {
+            var url = location.href;
+            if (url.indexOf('?') != -1) {
+                var ary = url.split('?')[1].split('&');
+
+                if (num == "-1") {
+                    if (parseInt(ary[1].split('=')[1]) > 1) {
+                        param = "?" + ary[0] + "&p=" + (parseInt(ary[1].split('=')[1]) - 1);
+                    } else {
+                        param = "?" + ary[0] + "&p=1";
+                    }
+                } else if (num == "-2") {
+                    param = "?" + ary[0] + "&p=" + (parseInt(ary[1].split('=')[1]) + 1);
+                } else {
+                    param = "?" + ary[0] + "&p=" + num;
+                }
+                url = url.split('?')[0];
+                if (ary[2] != undefined) {
+                    param = param + "&" + ary[2];
+                }
+            } else {
+                param = "?p=" + num;
+            }
+            window.location.href = url + param;
+
+        }
+
+        var url = location.href;
+        if (url.indexOf('?') != -1) {
+            var id = "";
+            var type = "";
+            var number = "";
+            var ary = url.split('?')[1].split('&');
+            for (i = 0; i <= ary.length - 1; i++) {
+                if (ary[i].split('=')[0] == 'p')
+                    id = ary[i].split('=')[1];
+                else if (ary[i].split('=')[0] == 'type')
+                    type = ary[i].split('=')[1];
+                else if (ary[i].split('=')[0] == 'sort')
+                    number = ary[i].split('=')[1];
+            }
+            if (id == "")
+                id = 1;
+            else if (type == "")
+                type = 1;
+        } else {
+            id = 1;
+            type = 1;
+        }
+
+        console.log("type:" + type);
+        console.log("id:" + id);
+
+
+        if (location.href.indexOf('?') != -1) {
+            param = location.href.split('?')[1].split("&")[0].split('=');
+            if (param[0] == "search-key") {
+                if (!param[1]) {
+                    window.history.go(-1);
+                } else {
+                    apiURL = '../include/product.inc.php/SearchProductByKeyword/' + decodeURI(param[1]);
+                }
+            } else {
+                apiURL = '../include/product.inc.php/getSameTypeProduct/' + type;
+            }
+        }
+        // else if(param[0]== "sort"){
+        
+        // }
+        else {
+            apiURL = '../include/product.inc.php/getSameTypeProduct/' + type;
+        }
+
+        
+        fetch(apiURL, {
+                method: "GET",
+                header: 'Content-Type: application/json; charset=utf-8'
+            })
+            .then((res) => {
+                const data = res.json();
+                return data;
+            })
+            .then((data) => {
+                console.log(data);
+                console.log(number);
+                if (number == 1) {
+                    data.sort(function (a, b) {
+                        return b.Product_price - a.Product_price;
+                    });
+                } else if (number == 2) {
+                    data.sort(function (a, b) {
+                        return a.Product_price - b.Product_price;
+                    });
+                }
+
+
+                let container = document.querySelectorAll(".product"); //.textContent="549"
+
+                for (let i = (id - 1) * container.length; i < (id) * container.length; i++) {
+                    let img = document.createElement("img");
+                    let name = document.createElement("h4");
+                    let intro = document.createElement("p");
+                    let price = document.createElement("h4");
+
+
+
+                    // img.setAttribute("src", data[i].urls.small);
+                    img.setAttribute("src", data[i].Product_imglocation + ".jpg");
+                    // console.log(data[i].Product_imglocation+".jpg");
+                    img.setAttribute("width", "230");
+                    img.setAttribute("height", "230");
+                    img.setAttribute("style", "margin-top: 22px;margin-bottom: 21px;");
+
+                    name.textContent = data[i].Product_name;
+
+                    intro.textContent = data[i].Product_intro;
+                    intro.setAttribute("style", "margin-bottom:50px;")
+
+                    if (data[i].Product_price != undefined) {
+                        price.textContent = "$" + data[i].Product_price;
+                    }
+                    price.setAttribute("class", "display-5 fw-bold");
+                    price.setAttribute("style", "margin-bottom: 28px;");
+
+                    container[i % 9].append(img);
+                    container[i % 9].append(name);
+                    container[i % 9].append(intro);
+                    container[i % 9].append(price);
+                }
+
+
+                // var name = document.querySelectorAll('.product-name');
+                // var intro = document.querySelectorAll('.product-intro');
+                // for (let i = (id-1) * name.length; i < (id) * name.length; i++) {
+                //     console.log(i);
+
+                //     name[i%9].textContent = data[i].Product_name;
+                //     intro[i%9].textContent = data[i].Product_intro;
+                // }
+
+            })
+    </script>
+
+</body>
+
+</html>

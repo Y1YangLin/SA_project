@@ -106,42 +106,42 @@ include "./include/session.inc.php";
     <div class="bg-dark border rounded hero-technology jumbotron h1 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Lotion" style="padding-bottom: 16px;">
         <h1 class="fs-2 fw-bold hero-title">化妝水</h1>
         <p class="fs-6 hero-subtitle">Lotion</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=1&p=1">瀏覽更多</a></p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="./class/product2.html?type=1&p=1">瀏覽更多</a></p>
     </div>
     <div class="bg-light border rounded hero-technology jumbotron h2 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Essence" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">精華液</h1>
         <p class="fs-6 hero-subtitle">Essence</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=2&p=1">瀏覽更多</a></p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="./class/product2.html?type=2&p=1">瀏覽更多</a></p>
     </div>
     <div class="bg-light border rounded hero-technology jumbotron h3 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Lotion2" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">乳液</h1>
         <p class="fs-6 hero-subtitle">Lotion</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=3&p=1">瀏覽更多</a></p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="./class/product2.html?type=3&p=1">瀏覽更多</a></p>
     </div>
     <div class="bg-light border rounded hero-technology jumbotron h4 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Cream" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">乳霜</h1>
         <p class="fs-6 hero-subtitle">cream</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=4&p=1">瀏覽更多</a></p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="./class/product2.html?type=4&p=1">瀏覽更多</a></p>
     </div>
     <div class="bg-light border rounded hero-technology jumbotron h5 py-5 px-4" data-aos="fade-up" id="Primer" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">妝前乳</h1>
         <p class="fs-6 hero-subtitle">Primer</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=5&p=1">瀏覽更多</a></p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="./class/product2.html?type=5&p=1">瀏覽更多</a></p>
     </div>
     <div class="bg-light border rounded hero-technology jumbotron h6 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Foundation" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">粉底液</h1>
         <p class="fs-6 hero-subtitle">foundation</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=6&p=1">瀏覽更多</a></p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="./class/product2.html?type=6&p=1">瀏覽更多</a></p>
     </div>
     <div class="bg-light border rounded hero-technology jumbotron h7 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Setting-Powder" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">蜜粉/蜜粉餅</h1>
         <p class="fs-6 hero-subtitle">setting powder</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=7&p=1">瀏覽更多</a></p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="./class/product2.html?type=7&p=1">瀏覽更多</a></p>
     </div>
     <div class="bg-light border rounded hero-technology jumbotron h8 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Setting-Spray" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">定裝噴霧</h1>
         <p class="hero-subtitle">setting spray</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=8&p=1">瀏覽更多</a></p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="./class/product2.html?type=8&p=1">瀏覽更多</a></p>
     </div>
     <div class="bg-dark text-secondary px-4 py-5 text-center">
         <div class="py-5">
