@@ -24,6 +24,7 @@ include "./include/session.inc.php";
     <link rel="stylesheet" href="assets/css/Full-Height-Hero.css">
     <link rel="stylesheet" href="assets/css/Gamanet_Header_v1.css">
     <link rel="stylesheet" href="assets/css/Hero-Carousel-images.css">
+    <link rel="stylesheet" href="assets/css/Hero-Technology--1.css">
     <link rel="stylesheet" href="assets/css/Hero-Technology-.css">
     <link rel="stylesheet" href="assets/css/Ludens-Client---Login-Dropdown.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -31,25 +32,18 @@ include "./include/session.inc.php";
 </head>
 
 <body>
-    <section data-aos="fade-up" data-aos-duration="800" id="hero">
-        <nav class="navbar navbar-dark navbar-expand-md">
-            <div class="container"><button class="navbar-toggler" data-bs-toggle="collapse"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
-        </nav>
-        <h1 class="text-uppercase fs-2 fw-bold text-center text-white LandingTitle" style="margin-bottom: 16px;margin-top: 261px;">化妝品比價推薦平台</h1>
-        <h6 class="display-6 text-capitalize fs-5 fw-lighter text-center text-white LandingSubtitle" style="margin-bottom: 0px;padding-bottom: 0px;">Cosmetics price comparison recommendation platform</h6>
-    </section>
-    <nav class="navbar navbar-light navbar-expand-md fixed-top text-bg-light navbar-fixed-top navigation-clean-button" style="background: rgb(34, 34, 34);border-radius: 20;border-top-left-radius: 20;border-top-right-radius: 20;border-bottom-right-radius: 20;border-bottom-left-radius: 20;border-style: none;padding-bottom: 0px;padding-top: 0px;">
+    <nav class="navbar navbar-light navbar-expand-md fixed-top fs-6 text-bg-light navbar-fixed-top navigation-clean-button" style="background: rgb(34, 34, 34);border-radius: 20;border-top-left-radius: 20;border-top-right-radius: 20;border-bottom-right-radius: 20;border-bottom-left-radius: 20;border-style: none;padding-bottom: 0px;padding-top: 0px;margin-right: 0px;">
         <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div><a class="navbar-brand" href="#"><span class="fw-bold">YOFU</span> </a></div>
-            <div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(255,255,255);">
+            <div><a class="navbar-brand" href="./index.php"><span class="fw-bold">YOFU</span> </a></div>
+            <div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(255,255,255);margin-left: 6px;">
                 <ul class="navbar-nav nav-right">
-                    <li class="nav-item" style="margin-left: 4px;margin-right: -1px;"><a class="nav-link active link-dark" href="index.html" style="color: rgba(224,217,217,0.9);padding-left: 8px;margin-left: 8px;padding-right: 5px;">首頁</a></li>
-                    <li class="nav-item"><a class="nav-link link-dark" href="about.html" style="color: rgba(224,217,217,0.9);padding-left: 11px;margin-left: 9px;padding-right: 7px;">產品</a></li>
+                    <li class="nav-item" style="margin-left: 4px;margin-right: -1px;"><a class="nav-link active link-dark" href="首頁_登入前.html" style="color: rgba(224,217,217,0.9);padding-right: 0px;padding-left: 0px;margin-left: -7px;margin-right: 21px;">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link link-dark" href="about.html" style="color: rgba(224,217,217,0.9);padding-right: 7px;padding-left: 7px;margin-left: -4px;">產品</a></li>
                     <li class="nav-item"><a class="nav-link link-dark" href="faq.html" style="color: rgba(224,217,217,0.9);margin-right: 9px;">FAQ</a></li>
                     <li class="nav-item"></li>
                 </ul>
-                <div class="dropdown show" style="margin-left: 763px;"><a class="dropdown-toggle fs-4 link-dark" aria-expanded="true" data-bs-toggle="dropdown" href="#" style="padding-bottom: 0px;margin-bottom: -1px;padding-top: 0px;margin-left: 44px;"><i class="fa fa-user"></i>&nbsp;</a>
-                    <div class="dropdown-menu dropdown-menu-end show" data-bs-popper="none">
+                <div class="dropdown" style="margin-left: 75%;"><a class="dropdown-toggle fs-4 link-dark" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="padding-bottom: 0px;margin-bottom: -1px;padding-top: 0px;margin-left: 44px;"><i class="fa fa-user"></i>&nbsp;</a>
+                    <div class="dropdown-menu dropdown-menu-end">
 
                         
                         
@@ -62,47 +56,92 @@ include "./include/session.inc.php";
                     </div>
                 </div>
             </div>
-        </div>
     </nav>
-    <div class="bg-light border rounded hero-technology jumbotron h1 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Lotion">
+    <div class="carousel slide" data-bs-ride="carousel" id="carousel-1" style="height: 600px;margin-top: 40px;">
+        <div class="carousel-inner h-100" data-aos="fade-up">
+            <div class="carousel-item active h-100" data-aos="fade-left"><img class="w-100 d-block position-absolute h-100 fit-cover" src="assets/img/主畫面.jpg" alt="Slide Image" style="z-index: -1;background-blend-mode: darken;">
+                <div class="container d-flex flex-column justify-content-center h-100">
+                    <div class="row">
+                        <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
+                            <div>
+                                <h1 class="text-uppercase fs-2 fw-bold text-center text-white mb-3">化妝品比價推薦平台</h1>
+                                <p class="fs-5 fw-lighter text-center text-white mb-4">Cosmetics Price Comparison Recommendation Platform</p>
+        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item h-100" data-aos="fade-left"><img class="w-100 d-block position-absolute h-100 fit-cover" src="assets/img/商品介紹_1.png" alt="Slide Image" style="z-index: -1;">
+                <div class="container d-flex flex-column justify-content-center h-100">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-4 offset-md-2">
+                            <div style="max-width: 350px;">
+                                <h1 class="text-uppercase fw-bold text-white">Biben dum<br>fringi dictum, augue purus</h1>
+                                <p class="fw-lighter text-light my-3">Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p><a class="btn btn-primary fs-6 fw-bold text-bg-light me-2" role="button" href="#">瀏覽更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item h-100" data-aos="fade-left"><img class="w-100 d-block position-absolute h-100 fit-cover" src="assets/img/商品介紹_2.png" alt="Slide Image" style="z-index: -1;">
+                <div class="container d-flex flex-column justify-content-center h-100">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-4 offset-md-2">
+                            <div style="max-width: 350px;">
+                                <h1 class="text-uppercase fw-bold text-white">Biben dum<br>fringi dictum, augue purus</h1>
+                                <p class="fw-lighter text-light my-3">Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p><a class="btn btn-primary fs-6 fw-bold text-bg-light me-2" role="button" href="#">瀏覽更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+        </ol>
+    </div>
+    <div class="bg-dark border rounded hero-technology jumbotron h1 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Lotion" style="padding-bottom: 16px;">
         <h1 class="fs-2 fw-bold hero-title">化妝水</h1>
-        <p class="hero-subtitle">Lotion</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="#">瀏覽更多</a></p>
+        <p class="fs-6 hero-subtitle">Lotion</p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=1&p=1">瀏覽更多</a></p>
     </div>
-    <div class="bg-light border rounded hero-technology jumbotron h2 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Essence">
+    <div class="bg-light border rounded hero-technology jumbotron h2 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Essence" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">精華液</h1>
-        <p class="hero-subtitle">Essence</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="#">瀏覽更多</a></p>
+        <p class="fs-6 hero-subtitle">Essence</p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=2&p=1">瀏覽更多</a></p>
     </div>
-    <div class="bg-light border rounded hero-technology jumbotron h3 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Lotion2">
+    <div class="bg-light border rounded hero-technology jumbotron h3 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Lotion2" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">乳液</h1>
-        <p class="hero-subtitle">Lotion</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="#">瀏覽更多</a></p>
+        <p class="fs-6 hero-subtitle">Lotion</p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=3&p=1">瀏覽更多</a></p>
     </div>
-    <div class="bg-light border rounded hero-technology jumbotron h4 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Cream">
+    <div class="bg-light border rounded hero-technology jumbotron h4 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Cream" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">乳霜</h1>
-        <p class="hero-subtitle">cream</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="#">瀏覽更多</a></p>
+        <p class="fs-6 hero-subtitle">cream</p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=4&p=1">瀏覽更多</a></p>
     </div>
-    <div class="bg-light border rounded hero-technology jumbotron h5 py-5 px-4" data-aos="fade-up" id="Primer">
+    <div class="bg-light border rounded hero-technology jumbotron h5 py-5 px-4" data-aos="fade-up" id="Primer" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">妝前乳</h1>
-        <p class="hero-subtitle">Primer</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="#">瀏覽更多</a></p>
+        <p class="fs-6 hero-subtitle">Primer</p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=5&p=1">瀏覽更多</a></p>
     </div>
-    <div class="bg-light border rounded hero-technology jumbotron h6 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Foundation">
+    <div class="bg-light border rounded hero-technology jumbotron h6 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Foundation" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">粉底液</h1>
-        <p class="hero-subtitle">foundation</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="#">瀏覽更多</a></p>
+        <p class="fs-6 hero-subtitle">foundation</p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=6&p=1">瀏覽更多</a></p>
     </div>
-    <div class="bg-light border rounded hero-technology jumbotron h7 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Setting-Powder">
+    <div class="bg-light border rounded hero-technology jumbotron h7 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Setting-Powder" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">蜜粉/蜜粉餅</h1>
-        <p class="hero-subtitle">setting powder</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="#">瀏覽更多</a></p>
+        <p class="fs-6 hero-subtitle">setting powder</p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=7&p=1">瀏覽更多</a></p>
     </div>
-    <div class="bg-light border rounded hero-technology jumbotron h8 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Setting-Spray">
+    <div class="bg-light border rounded hero-technology jumbotron h8 py-5 px-4" data-aos="fade-up" data-aos-duration="800" id="Setting-Spray" style="margin-top: -10px;">
         <h1 class="fs-2 fw-bold hero-title">定裝噴霧</h1>
         <p class="hero-subtitle">setting spray</p>
-        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="#">瀏覽更多</a></p>
+        <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="../product2.html?type=8&p=1">瀏覽更多</a></p>
     </div>
     <div class="bg-dark text-secondary px-4 py-5 text-center">
         <div class="py-5">

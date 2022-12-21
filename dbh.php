@@ -13,7 +13,7 @@
         public function connect(){
             try{
                 $DB_address = 'localhost';
-                $DB_Name = 'test';
+                $DB_Name = 'testdb';//'test
                 $DB_User = 'root';
                 $DB_password = '';
 

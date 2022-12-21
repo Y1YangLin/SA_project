@@ -103,34 +103,46 @@
 }
 
 #Lotion {
-  background: url('../../assets/img/depositphotos_192074332-stock-photo-makeup-products-with-cosmetic-bag.jpg');
+  background: url('../../assets/img/化妝水.png');
+  background-size: cover;
+  object-fit: cover;
+  height: 100%!important;
+  width: 100%!important;
+  display: block!important;
 }
 
 #Essence {
-  background: url('../../assets/img/depositphotos_192074332-stock-photo-makeup-products-with-cosmetic-bag.jpg');
+  background: url('../../assets/img/精華液.png');
+  background-size: cover;
 }
 
 #Lotion2 {
-  background: url('../../assets/img/depositphotos_192074332-stock-photo-makeup-products-with-cosmetic-bag.jpg');
+  background: url('../../assets/img/乳液.png');
+  background-size: cover;
 }
 
 #Cream {
-  background: url('../../assets/img/depositphotos_192074332-stock-photo-makeup-products-with-cosmetic-bag.jpg');
+  background: url('../../assets/img/乳霜.png');
+  background-size: cover;
 }
 
 #Primer {
-  background: url('../../assets/img/depositphotos_192074332-stock-photo-makeup-products-with-cosmetic-bag.jpg');
+  background: url('../../assets/img/妝前乳.png');
+  background-size: cover;
 }
 
 #Foundation {
-  background: url('../../assets/img/depositphotos_192074332-stock-photo-makeup-products-with-cosmetic-bag.jpg');
+  background: url('../../assets/img/粉底液.png');
+  background-size: cover;
 }
 
 #Setting-Powder {
-  background: url('../../assets/img/depositphotos_192074332-stock-photo-makeup-products-with-cosmetic-bag.jpg');
+  background: url('../../assets/img/蜜粉.png');
+  background-size: cover;
 }
 
 #Setting-Spray {
-  background: url('../../assets/img/depositphotos_192074332-stock-photo-makeup-products-with-cosmetic-bag.jpg');
+  background: url('../../assets/img/定裝噴霧.png');
+  background-size: cover;
 }
 
