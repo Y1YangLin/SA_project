@@ -11,20 +11,17 @@
 
         }
 
-        public function Commit(){
-            $data = [
+        public function Comment(){
 
-            ];
+            $data = $this->adminModel->getAllComment();
             
-            $this->view('admins/Commit', $data);
+            $this->view('admins/Comment', $data);
             
         }
 
         public function Member(){
 
-            $data = [
-
-            ];
+            $data = $this->adminModel->getAllMember();
             
             $this->view('admins/Member', $data);
 
@@ -32,9 +29,7 @@
 
         public function Manager(){
 
-            $data = [
-
-            ];
+            $data = $this->adminModel->getAllManager();
             
             $this->view('admins/Manager', $data);
 
@@ -42,9 +37,7 @@
 
         public function Product(){
 
-            $data = [
-
-            ];
+            $data = $this->adminModel->getAllProduct();
             
             $this->view('admins/Product', $data);
 
@@ -52,9 +45,7 @@
 
         public function Questionnaire(){
 
-            $data = [
-
-            ];
+            $data = $this->adminModel->getAllQuestionnaire();
             
             $this->view('admins/Questionnaire', $data);
 

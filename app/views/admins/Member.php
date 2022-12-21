@@ -28,7 +28,7 @@
         </li>
         <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Product"><i class="fas fa-archive mx-3"></i><span class="text-nowrap mx-2">商品</span></a></li>
         <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Member"><i class="fas fa-user mx-3"></i><span class="text-nowrap mx-2">會員</span></a></li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Commit"><i class="fas fa-pen-alt mx-3"></i><span class="text-nowrap mx-2">評論</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Comment"><i class="fas fa-pen-alt mx-3"></i><span class="text-nowrap mx-2">評論</span></a></li>
         <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Questionnaire"><i class="fas fa-chart-bar mx-3"></i><span class="text-nowrap mx-2">問卷</span></a></li>
         <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Manager"><i class="far fa-star mx-3"></i><span class="text-nowrap mx-2">管理者</span></a></li>
         <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-left text-white py-1 px-0 position-relative" aria-expanded="false" data-toggle="dropdown" href="#"><i class="fas fa-sliders-h mx-3"></i><span class="text-nowrap mx-2">設定</span><i class="fas fa-caret-down float-none float-lg-right fa-sm"></i></a>
@@ -62,7 +62,7 @@
                                     <tr class="warning no-result">
                                         <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
                                     </tr>
-                                    <tr>
+                                    <!-- <tr>
                                         <td>01</td>
                                         <td>India</td>
                                         <td>Souvik Kundu</td>
@@ -70,7 +70,24 @@
                                         <td>2014</td>
                                         <td>2014</td>
                                         <td><button class="btn btn-success" style="margin-left:5px;background:var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size:11px;"></i></button><button class="btn btn-danger" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-trash" style="font-size:15px;"></i></button></td>
-                                    </tr>
+                                    </tr> -->
+                                    <?php
+
+                                        foreach($data as $arr){
+                                            echo '<tr>';
+                                            echo '<td>' . $arr->Member_id . '</td>';
+                                            echo '<td>' . $arr->Member_name . '</td>';
+                                            echo '<td>' . $arr->Member_email . '</td>';
+                                            echo '<td>' . $arr->Member_password . '</td>';
+                                            echo '<td>' . $arr->Member_birthday . '</td>';
+                                            echo '<td>' . $arr->Member_faceType_id . '</td>';
+                                            echo '<td><button class="btn btn-success" style="margin-left:5px;background:var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size:11px;"></i></button><button class="btn btn-danger" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-trash" style="font-size:15px;"></i></button></td>';
+                                            echo '</tr>';
+                                        }
+                                        
+
+                                    ?>
+
                                 </tbody>
                             </table>
                         </div>
