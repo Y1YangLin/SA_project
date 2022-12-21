@@ -135,7 +135,7 @@
                     
                     if($loggedInUser){
 
-                        // Create seesion
+                        
                         $this->createUserSession($loggedInUser);
                     
                     }else{
@@ -143,7 +143,7 @@
                         $this->view('users/login', $data);
                     }
                 } else {
-                    // Load view with error
+                    
 
                     $this->view('users/login', $data);
                 }
@@ -155,7 +155,7 @@
                     'username_err' => '',
                     'password_err' => ''
                 ];
-                // Load view
+                
                 $this->view('users/login', $data);
             }
             
