@@ -75,23 +75,25 @@ header("content-type:text/html;charset=utf-8");
                                 
                                 <input id = "name" class="form-control" type="name" name="name" placeholder="姓名" style="font-size: 18px;margin-bottom: 15px;padding-right: 206px;margin-right: -237px;">
                                 
-                                <?php //echo !empty($data['username_err']) ? '<span style="color:red;"><b>使用者名稱輸入錯囉 !</b> </span>': '';?>
+                                <?php echo !empty($data['username_err']) ? '<span style="color:red;"><b>'.$data['username_err'].'</b> </span>': '';?>
 
                                 <!-- <input class="form-control" type="text" name="address" placeholder="住址" style="font-size: 18px;margin-bottom: 15px;">
                                 <input class="form-control" type="phone" name="phone" placeholder="電話" style="font-size: 18px;margin-bottom: 15px;"> -->
                                 <input class="form-control" type="email" name="email" placeholder="信箱" style="font-size: 18px;margin-bottom: 15px;">
-                                <?php //echo !empty($data['email_err']) ? '<span style="color:red;"><b>信箱輸入錯囉 !</b> </span>': '';?> 
+                                <?php echo !empty($data['email_err']) ? '<span style="color:red;"><b>'.$data['email_err'].'</b> </span>': '';
+                                ?> 
+                                
                                  <div class = "relative ">
                                     <div class="fas fa-eye eye"></div>   
                                     <input class="form-control password" type="password" name="pwd" placeholder="密碼" style="font-size: 18px;margin-bottom: 17px;">             
                                  </div>                             
-                                 <?php //echo !empty($data['password_err']) ? '<span style="color:red;"><b>密碼輸入錯囉 !</b> </span>': '';?>
+                                 <?php echo !empty($data['password_err']) ? '<span style="color:red;"><b>'.$data['password_err'].'</b> </span>': '';?>
                                  <div class = "relative ">
                                     <div class="fa fa-eye eye1"></div>
                                     <input class="form-control password1" type="password" name="repwd" placeholder="再次輸入密碼" style="font-size: 18px;margin-bottom: 17px;">                        
                                     <?php //echo 'test' ;?>
                                  </div>
-                                 <?php //echo !empty($data['passwordConfirmation_err']) ? '<span style="color:red;"><b>密碼不對喔 !</b> </span>  <br>': '';?>
+                                 <?php echo !empty($data['passwordConfirmation_err']) ? '<span style="color:red;"><b>'.$data['passwordConfirmation_err'].'</b> </span>  <br>': '';?>
                                 <button class="btn btn-primary test" type="submit" name="submit" style="width: 267px;font-size: 33px;height: 55.5px;padding-top: 5px;padding-bottom: 6px;background: #63686d;font-family: Barrio, serif;font-weight: bold;">註冊</button>
                               </form>
                            </div>
@@ -100,13 +102,13 @@ header("content-type:text/html;charset=utf-8");
                                  <form class="text-center form_login" action="<?php echo URLROOT; ?>/users/login" name="signin-form" method="post"style="width: 376px;padding-left: 0px;">
                                     <input class="form-control" type="email" name="email" placeholder="電子信箱" style="font-size: 18px;margin-bottom: 15px;">
                                     
-                                    <?php echo !empty($data['email_err']) ? '<span style="color:red;"><b>'.$data['email_err'].'</b> </span>': '';?>
+                                    <?php //echo !empty($data['email_err']) ? '<span style="color:red;"><b>信箱輸入錯囉 !</b> </span>': '';?>
                                     
                                     <div class = "relative ">
                                        <div class="fas fa-eye eye2"></div>
                                        <input class="form-control password2" type="password" name="pwd" placeholder="密碼" style="font-size: 18px;margin-bottom: 17px;">                                  
                                     </div> 
-                                    <?php echo !empty($data['password_err']) ? '<span style="color:red;"><b>'.$data['password_err'].'</b>': '';?>                                    
+                                    <?php //echo !empty($data['password_err']) ? '<span style="color:red;"><b>密碼輸入錯囉 ! </b>': '';?>                                    
                                     <p class="text-muted" style="margin-top: 10px;">忘記密碼?</p>
                                     <button class="btn btn-primary" name="submit" type="submit" style="width: 267px;font-size: 33px;height: 55.5px;padding-top: 5px;padding-bottom: 6px;background: #63686d;">登入</button>
                                  </form>

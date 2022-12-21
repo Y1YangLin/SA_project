@@ -25,37 +25,30 @@
 
                 
                 if(empty($data['username'])){
-                    $data['username_err'] = 'Please enter username';
-                } else {
-                    
-                    if($this->userModel->findUserByUsername($data['username'])){
-                        $data['username_err'] = 'Username is already used';
-                    }
+                    $data['username_err'] = '請輸入使用者姓名 !';
                 }
-
                 
                 if(empty($data['password'])){
-                    $data['password_err'] = 'Please enter password';
+                    $data['password_err'] = '請輸入密碼 !';
                 } elseif (strlen($data['password'] < 6)){
-                    $data['password_err'] = 'Password must be at least 6 characters';
+                    $data['password_err'] = '你的密碼沒料喔== 再一個';
                 }
 
                 
                 if(empty($data['passwordConfirmation'])){
-                    $data['passwordConfirmation_err'] = 'Please confirm password';
+                    $data['passwordConfirmation_err'] = '請再次輸入密碼 !';
                 } else {
                     if($data['password'] != $data['passwordConfirmation']){
-                        $data['passwordConfirmation_err'] = 'Passwords do not match';
+                        $data['passwordConfirmation_err'] = '密碼不對喔 !';
                     }
                 }
 
                 
                 if(empty($data['email'])){
-                    $data['email_err'] = 'Please enter email';
+                    $data['email_err'] = '請輸入信箱';
                 } else {
-                    
                     if($this->userModel->findUserByEmail($data['email'])){
-                        $data['email_err'] = 'Email is already used';
+                        $data['email_err'] = '這個信箱有人註冊了==';
                     }
                 }
 
@@ -68,13 +61,18 @@
 
                     
                     if($this->userModel->register($data)){
-                        redirect('users/login');
+                        
+                        $_SESSION['user_email'] = $data['email'];
+                        
+                        // redirect('pages/dashboard');
+                        $this->view('pages/dashboard');
+
                     }else{
                         die('something went wrong');
                     }
                 } else {
                     
-                    $this->view('users/login', $data);
+                    $this->view('users/signup', $data);
                 }
 
             } else {
@@ -92,7 +90,7 @@
                 ];
 
                 // Load view
-                $this->view('users/login', $data);
+                $this->view('users/signup', $data);
             }
 
         }
@@ -108,25 +106,25 @@
                     'email' => trim($_POST['email']),
                     'password' => trim($_POST['pwd']),
                     'email_err' => '',
-                    'password_err' => ''
+                    'password_err' => '',
+
+                    // thus signup can catch the array value
+                    // 'username_err' => '',
+                    // 'passwordConfirmation_err' => '',
                 ];
 
                 
-                if(empty($data['email'])){
-                    $data['email_err'] = 'Please enter email';
-                }
-
-                
                 if(empty($data['password'])){
-                    $data['password_err'] = 'Please enter password';
+                    $data['password_err'] = '請輸入密碼';
                 }
 
-                
-                if($this->userModel->findUserByEmail($data['email'])){
+                if(empty($data['email'])){
+                    $data['email_err'] = '請輸入信箱';
+                }else if($this->userModel->findUserByEmail($data['email'])){
 
                 } else {
                     
-                    $data['email_err'] = 'No useremail found';
+                    $data['email_err'] = '尚未註冊 找不到信箱 !!';
                 }
 
                 if(empty($data['email_err']) && empty($data['password_err'])){
@@ -139,7 +137,7 @@
                         $this->createUserSession($loggedInUser);
                     
                     }else{
-                        $data['password_err'] = 'Password incorrect';
+                        $data['password_err'] = '就這 ? 密碼錯了';
                         $this->view('users/login', $data);
                     }
                 } else {
@@ -152,8 +150,13 @@
                 $data = [
                     'email' => '',
                     'password' => '',
-                    'username_err' => '',
-                    'password_err' => ''
+                    'email_err' => '',
+                    'password_err' => '',
+
+                    // thus signup can catch the array value
+                    // 'username_err' => '',
+                    // 'passwordConfirmation_err' => '',
+
                 ];
                 
                 $this->view('users/login', $data);
@@ -166,8 +169,13 @@
             $_SESSION['user_id'] = $user->Member_id;
             $_SESSION['user_email'] = $user->Member_email;
             
+            $data = $user->Member_name;
+
             // $_SESSION['user_id'] = $user->id;
             redirect('pages/dashboard');
+
+            $this->view('pages/dashboard', $data);
+
         }
 
         public function logout(){

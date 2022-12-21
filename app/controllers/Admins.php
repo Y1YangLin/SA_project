@@ -6,9 +6,8 @@
             
             $this->adminModel = $this->model('Admin');
 
-            // $this->view('admins/Commit');
             
-
+        
         }
 
         public function Comment(){
