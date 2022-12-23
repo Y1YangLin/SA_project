@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/sidebar.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/Table-With-Search-search-table.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/Table-With-Search.css">
+    
+
 </head>
 
 <body>
@@ -52,7 +54,7 @@
                                         <th id="trs-hd-1" class="col-lg-1">ID</th>
                                         <th id="trs-hd-4" class="col-lg-2">Name</th>
                                         <th id="trs-hd-5" class="col-lg-2">Email</th>
-                                        <th id="trs-hd-8" class="col-lg-2">Password</th>
+                                        <!-- <th id="trs-hd-8" class="col-lg-2">Password</th> -->
                                         <th id="trs-hd-7" class="col-lg-2">Birthday</th>
                                         <th id="trs-hd-3" class="col-lg-3">FaceType_ID</th>
                                         <th id="trs-hd-6" class="col-lg-2">Action</th>
@@ -62,29 +64,42 @@
                                     <tr class="warning no-result">
                                         <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
                                     </tr>
-                                    <!-- <tr>
-                                        <td>01</td>
-                                        <td>India</td>
-                                        <td>Souvik Kundu</td>
-                                        <td>2014</td>
-                                        <td>2014</td>
-                                        <td>2014</td>
-                                        <td><button class="btn btn-success" style="margin-left:5px;background:var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size:11px;"></i></button><button class="btn btn-danger" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-trash" style="font-size:15px;"></i></button></td>
-                                    </tr> -->
+                                    
                                     <?php
-
+                                        // $id = ''; $name = ''; $email = ''; $pwd = ''; $bd = ''; $faceType_id = '';
                                         foreach($data as $arr){
+                                            
                                             echo '<tr>';
                                             echo '<td>' . $arr->Member_id . '</td>';
                                             echo '<td>' . $arr->Member_name . '</td>';
                                             echo '<td>' . $arr->Member_email . '</td>';
-                                            echo '<td>' . $arr->Member_password . '</td>';
+                                            //echo '<td>' . $arr->Member_password . '</td>';
                                             echo '<td>' . $arr->Member_birthday . '</td>';
                                             echo '<td>' . $arr->Member_faceType_id . '</td>';
                                             echo '<td><button class="btn btn-success" style="margin-left:5px;background:var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size:11px;"></i></button><button class="btn btn-danger" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-trash" style="font-size:15px;"></i></button></td>';
                                             echo '</tr>';
+
+                                    ?>
+                                            
+                                    <script type="text/javascript">
+                                        function getValue(){
+                                            document.getElementById('ID-3').value;
+                                            document.getElementById('Name-1').value  = 'test';
+                                            document.getElementById('Email-1').value = 'test';
+                                            document.getElementById('Date-3').value = 'test';
+                                            document.getElementById('FaceType_ID-1').value = 'test';
                                         }
-                                        
+                                         
+                                        <?php
+                                        echo 'getValue()';
+                                    ?>
+
+                                    </script>
+                                    
+                                    
+                                    <?php
+                    
+                                        }
 
                                     ?>
 
@@ -103,7 +118,7 @@
                     <h4 style="font-weight: bold;text-align: center;color: var(--green);">新增</h4>
                     <hr>
                     <form>
-                        <div class="form-group"><input class="form-control item" type="text" id="ID-2" placeholder="ID"></div>
+                        <div class="form-group"><input class="form-control item" type="text" id="ID-2" placeholder="ID" ></div>
                         <div class="form-group"><input class="form-control item" type="text" id="Name" placeholder="Name"></div>
                         <div class="form-group"><input class="form-control item" type="text" id="Email" placeholder="Email"></div>
                         <div class="form-group"><input class="form-control item" type="text" id="Password" placeholder="Password"></div>
@@ -122,13 +137,26 @@
                     <h4 style="color: var(--blue);font-weight: bold;text-align: center;">編輯</h4>
                     <hr>
                     <form>
-                        <div class="form-group"><input class="form-control item" type="text" id="ID-3" placeholder="ID"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Name-1" placeholder="Name"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Email-1" placeholder="Email"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Password-1" placeholder="Password"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="FaceType_ID-1" placeholder="FaceType_ID"></div>
-                        <div class="form-group"><input class="form-control item" type="date" id="Date-3" placeholder="Birthday"></div>
+
+                        <?php  
+                            
+                        ?>
+
+                        <div class="form-group"><input class="form-control item" type="text" id="ID-3" placeholder="ID" value="<?php //echo 'test';?>"></div>
+                        <div class="form-group"><input class="form-control item" type="text" id="Name-1" placeholder="Name" value="<?php //echo $name;?>"></div>
+                        <div class="form-group"><input class="form-control item" type="text" id="Email-1" placeholder="Email" value="<?php //echo $email;?>"></div>
+                        
+                        <div class="form-group"><input class="form-control item" type="text" id="FaceType_ID-1" placeholder="FaceType_ID" value="<?php //echo $faceType_id;?>"></div>
+                        <div class="form-group"><input class="form-control item" type="date" id="Date-3" placeholder="Birthday" value="<?php //echo $bd;?>"></div>
+                    
+                        
                     </form>
+                
+                    <?php
+
+                                        
+                    ?>
+                
                 </div>
                 <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary" type="button">確定更改</button></div>
             </div>
@@ -150,6 +178,8 @@
             </div>
         </div>
     </div>
+
+    
     <script src="<?php echo URLROOT; ?>/admin_assets/js/jquery.min.js"></script>
     <script src="<?php echo URLROOT; ?>/admin_assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?php echo URLROOT; ?>/admin_assets/js/bs-init.js"></script>
@@ -163,6 +193,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo URLROOT; ?>/admin_assets/js/sidebar.js"></script>
     <script src="<?php echo URLROOT; ?>/admin_assets/js/Table-With-Search.js"></script>
+    
+
 </body>
 
 </html>

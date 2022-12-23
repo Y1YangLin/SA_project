@@ -53,7 +53,7 @@
                                         <th id="trs-hd-2" class="col-lg-2">Name</th>
                                         <th id="trs-hd-3" class="col-lg-3">Email</th>
                                         <th id="trs-hd-4" class="col-lg-2">Birthday</th>
-                                        <th id="trs-hd-5" class="col-lg-2">Password</th>
+                                        <!-- <th id="trs-hd-5" class="col-lg-2">Password</th> -->
                                         <th id="trs-hd-6" class="col-lg-2">Action</th>
                                     </tr>
                                 </thead>
@@ -94,7 +94,7 @@
                                             echo '<td>' . $arr->Manager_id . '</td>';
                                             echo '<td>' . $arr->Manager_name . '</td>';
                                             echo '<td>' . $arr->Manager_email . '</td>';
-                                            echo '<td>' . $arr->Manager_password . '</td>';
+                                            // echo '<td>' . $arr->Manager_password . '</td>';
                                             echo '<td>' . $arr->Manager_birthday . '</td>';
                                             
                                             echo '<td><button class="btn btn-success" style="margin-left:5px;background:var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size:11px;"></i></button><button class="btn btn-danger" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-trash" style="font-size:15px;"></i></button></td>';
