@@ -19,7 +19,11 @@
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/sidebar.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/Table-With-Search-search-table.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/Table-With-Search.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
+
     
+
 
 </head>
 
@@ -38,6 +42,73 @@
         </li>
         <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Logout"><i class="fas fa-sign-out-alt mx-3"></i><i class="fa fa-caret-right d-none position-absolute"></i><span class="text-nowrap mx-2">登出</span></a></li>
     </ul>
+    
+    <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal-Add" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 style="font-weight: bold;text-align: center;color: var(--green);">新增</h4>
+                    <hr>
+                    <form action="<?php echo URLROOT; ?>/admins/addMember" method="POST">
+                        
+                        <div class="form-group"><input class="form-control item" name="name" type="text" id="Name" placeholder="Name"></div>
+                        <div class="form-group"><input class="form-control item" name="email" type="text" id="Email" placeholder="Email"></div>
+                        <div class="form-group"><input class="form-control item" name="password" type="text" id="Password" placeholder="Password"></div>
+                        <div class="form-group"><input class="form-control item" name="face_type" type="text" id="FaceType_ID" placeholder="FaceType_ID"></div>
+                        <div class="form-group"><input class="form-control item" name="date" type="date" id="Date" placeholder="Birthday"></div>
+                    
+                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary btn-success" name="submit" type="submit">確定新增</button></div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="ModalEdit" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 style="color: var(--blue);font-weight: bold;text-align: center;">編輯</h4>
+                    <hr>
+                    <form action="<?php echo URLROOT; ?>/admins/modifyMember" method="POST">
+                        
+                    
+                        <div class="form-group"><input class="form-control" type="text" name="id" id="ID2" placeholder="ID" value=""></div>
+                        <div class="form-group"><input class="form-control" type="text" name="name" id="Name2" placeholder="Name" value=""></div>
+                        <div class="form-group"><input class="form-control" type="text" name="email" id="Email2" placeholder="Email"></div>
+                        <div class="form-group"><input class="form-control" type="date" name="date" id="Date2" placeholder="Birthday" ></div>
+                        <div class="form-group"><input class="form-control" type="text" name="face_type" id="FaceType_ID2" placeholder="FaceType_ID"></div>
+                        
+                    
+                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary" type="submit">確定更改</button></div>
+                    </form>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal-Delete" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 style="color: var(--red);font-weight: bold;text-align: center;">刪除</h4>
+                    <hr>
+                    <form action="<?php echo URLROOT; ?>/admins/deleteMember" method="POST">
+                        <div class="form-group">
+                            <h4 style="color: var(--red);font-weight: bold;text-align: center;"><span style="color: rgb(51, 51, 51);">確定要刪除?</span></h4>
+                        </div>
+                        <input type="hidden" name="id" id="ready_to_delete" value="">
+                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary btn-danger" type="submit">確定刪除</button></div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
     <div class="container article-clean">
         <div class="row">
             <div class="col-lg-11 col-xl-8 offset-lg-1 offset-xl-2 rubberBand animated">
@@ -65,43 +136,44 @@
                                         <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
                                     </tr>
                                     
-                                    <?php
-                                        // $id = ''; $name = ''; $email = ''; $pwd = ''; $bd = ''; $faceType_id = '';
-                                        foreach($data as $arr){
-                                            
-                                            echo '<tr>';
-                                            echo '<td>' . $arr->Member_id . '</td>';
-                                            echo '<td>' . $arr->Member_name . '</td>';
-                                            echo '<td>' . $arr->Member_email . '</td>';
-                                            //echo '<td>' . $arr->Member_password . '</td>';
-                                            echo '<td>' . $arr->Member_birthday . '</td>';
-                                            echo '<td>' . $arr->Member_faceType_id . '</td>';
-                                            echo '<td><button class="btn btn-success" style="margin-left:5px;background:var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size:11px;"></i></button><button class="btn btn-danger" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-trash" style="font-size:15px;"></i></button></td>';
-                                            echo '</tr>';
+                                    <?php $id = 0; $name = ''; $email = ''; $bd = ''; $facetype = ''; ?>
 
-                                    ?>
+                                    <?php foreach($data as $arr){ ?>
                                             
-                                    <script type="text/javascript">
-                                        function getValue(){
-                                            document.getElementById('ID-3').value;
-                                            document.getElementById('Name-1').value  = 'test';
-                                            document.getElementById('Email-1').value = 'test';
-                                            document.getElementById('Date-3').value = 'test';
-                                            document.getElementById('FaceType_ID-1').value = 'test';
-                                        }
-                                         
-                                        <?php
-                                        echo 'getValue()';
-                                    ?>
+                                    <tr>
+                                    
+                                        <td>
+                                            <?php echo $arr->Member_id; 
+                                            
+                                            $id = $arr->Member_id;?> 
+                                        </td>
+                                        <td> 
+                                            <?php echo $arr->Member_name ;?> 
+                                        </td>
+                                        <td> 
+                                            <?php echo $arr->Member_email ;?>
+                                        </td>
+                                        <td> 
+                                            <?php echo $arr->Member_birthday ;?>
+                                        </td>
+                                        <td> 
+                                            <?php echo $arr->Member_faceType_id ;?>
+                                        </td>
 
-                                    </script>
+                                        <td>
+                                        <div class="btn-group">
+                                            <button class="btn btn-success" style="margin-left:5px;background:var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#ModalEdit"><i class="far fa-edit" style="font-size:11px;"></i></button>
+                                            <button class="btn btn-danger" style="margin-left:5px;" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-trash" style="font-size:15px;"></i></button>
+                                        
+                                        </div>
+                                        </td>
+                                    
+                                    </tr>
                                     
                                     
-                                    <?php
-                    
-                                        }
+                                    <?php } ?>
 
-                                    ?>
+                                    
 
                                 </tbody>
                             </table>
@@ -111,75 +183,15 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal-Add" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <h4 style="font-weight: bold;text-align: center;color: var(--green);">新增</h4>
-                    <hr>
-                    <form>
-                        <div class="form-group"><input class="form-control item" type="text" id="ID-2" placeholder="ID" ></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Name" placeholder="Name"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Email" placeholder="Email"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Password" placeholder="Password"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="FaceType_ID" placeholder="FaceType_ID"></div>
-                        <div class="form-group"><input class="form-control item" type="date" id="Date-2" placeholder="Birthday"></div>
-                    </form>
-                </div>
-                <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary btn-success" type="button">確定新增</button></div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal-Edit" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <h4 style="color: var(--blue);font-weight: bold;text-align: center;">編輯</h4>
-                    <hr>
-                    <form>
+    
+    
 
-                        <?php  
-                            
-                        ?>
-
-                        <div class="form-group"><input class="form-control item" type="text" id="ID-3" placeholder="ID" value="<?php //echo 'test';?>"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Name-1" placeholder="Name" value="<?php //echo $name;?>"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Email-1" placeholder="Email" value="<?php //echo $email;?>"></div>
-                        
-                        <div class="form-group"><input class="form-control item" type="text" id="FaceType_ID-1" placeholder="FaceType_ID" value="<?php //echo $faceType_id;?>"></div>
-                        <div class="form-group"><input class="form-control item" type="date" id="Date-3" placeholder="Birthday" value="<?php //echo $bd;?>"></div>
-                    
-                        
-                    </form>
-                
-                    <?php
-
-                                        
-                    ?>
-                
-                </div>
-                <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary" type="button">確定更改</button></div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal-Delete" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <h4 style="color: var(--red);font-weight: bold;text-align: center;">刪除</h4>
-                    <hr>
-                    <form>
-                        <div class="form-group">
-                            <h4 style="color: var(--red);font-weight: bold;text-align: center;"><span style="color: rgb(51, 51, 51);">確定要刪除?</span></h4>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary btn-danger" type="button">確定刪除</button></div>
-            </div>
-        </div>
-    </div>
 
     
+    
+    
+    
+
     <script src="<?php echo URLROOT; ?>/admin_assets/js/jquery.min.js"></script>
     <script src="<?php echo URLROOT; ?>/admin_assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?php echo URLROOT; ?>/admin_assets/js/bs-init.js"></script>
@@ -194,6 +206,31 @@
     <script src="<?php echo URLROOT; ?>/admin_assets/js/sidebar.js"></script>
     <script src="<?php echo URLROOT; ?>/admin_assets/js/Table-With-Search.js"></script>
     
+    <script>
+
+        $('#ModalEdit').on('show.bs.modal', e => {
+            var $button = $(e.relatedTarget);
+            $('#ID2').val($button.closest('td').prev().prev().prev().prev().prev().text().trim());
+            
+            $('#Name2').val($button.closest('td').prev().prev().prev().prev().text().trim());
+            $('#Email2').val($button.closest('td').prev().prev().prev().text().trim());
+            $('#Date2').val($button.closest('td').prev().prev().text().trim());
+            $('#FaceType_ID2').val($button.closest('td').prev().text().trim());
+            
+        
+        });
+
+        $('#exampleModal-Delete').on('show.bs.modal', e => {
+            var $button = $(e.relatedTarget);
+            $('#ready_to_delete').val($button.closest('td').prev().prev().prev().prev().prev().text().trim());
+        
+        });
+
+        
+        
+
+    </script>
+
 
 </body>
 
