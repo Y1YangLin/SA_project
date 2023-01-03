@@ -64,23 +64,25 @@
                                         <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
                                     </tr>
                                     
-                                    <?php
+                                    <?php foreach($data as $arr){ ?>
+                                            <tr>
+                                             <td> <?php echo $arr->Product_id ;?></td>
+                                             <td> <?php echo $arr->Product_ProductCategory_id ;?> </td>
+                                             <td> <?php echo $arr->Product_FaceCategory_id ;?> </td>
+                                             <td> <?php echo $arr->Product_name ;?> </td>
+                                             <td> <?php echo $arr->Product_intro ;?> </td>
+                                             <td> <?php echo $arr->Product_price ;?> </td>
+                                             <td> <?php echo $arr->Product_imglocation ;?> </td>
+                                             <td>
+                                             <div class="btn-group">
+                                                <button class="btn btn-success" style="margin-left:5px;background:var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size:11px;"></i></button>
+                                                <button class="btn btn-danger" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-trash" style="font-size:15px;"></i></button>
+                                            </div>
+                                            </td>
+                                             </tr>
 
-                                        foreach($data as $arr){
-                                            echo '<tr>';
-                                            echo '<td>' . $arr->Product_id . '</td>';
-                                            echo '<td>' . $arr->Product_ProductCategory_id . '</td>';
-                                            echo '<td>' . $arr->Product_FaceCategory_id . '</td>';
-                                            echo '<td>' . $arr->Product_name . '</td>';
-                                            echo '<td>' . $arr->Product_intro . '</td>';
-                                            echo '<td>' . $arr->Product_price . '</td>';
-                                            echo '<td>' . $arr->Product_imglocation . '</td>';
-                                            echo '<td><button class="btn btn-success" style="margin-left:5px;background:var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size:11px;"></i></button><button class="btn btn-danger" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-trash" style="font-size:15px;"></i></button></td>';
-                                            echo '</tr>';
-                                        }
-                                        
 
-                                    ?>
+                                    <?php } ?>
 
                                 </tbody>
                             </table>
@@ -96,17 +98,19 @@
                 <div class="modal-body">
                     <h4 style="font-weight: bold;text-align: center;color: var(--green);">新增</h4>
                     <hr>
-                    <form>
-                        <div class="form-group"><input class="form-control item" type="text" id="ID" placeholder="ID"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="ProductCategory_ID" placeholder="ProductCategory_ID"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="FaceCategory_ID" placeholder="FaceCategory_ID"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Name" placeholder="Name"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Intro" placeholder="Intro"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Price" placeholder="Price"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Inglocation" placeholder="Inglocation"></div>
+                    <form action="<?php echo URLROOT; ?>/admins/addProduct" method="POST">
+                        <!-- <div class="form-group"><input class="form-control item" name="id" type="text" id="ID" placeholder="ID"></div> -->
+                        <div class="form-group"><input class="form-control item" name="category_id" type="text" id="ProductCategory_ID" placeholder="ProductCategory_ID"></div>
+                        <div class="form-group"><input class="form-control item" name="facecategory_id" type="text" id="FaceCategory_ID" placeholder="FaceCategory_ID"></div>
+                        <div class="form-group"><input class="form-control item" name="name" type="text" id="Name" placeholder="Name"></div>
+                        <div class="form-group"><input class="form-control item" name="intro" type="text" id="Intro" placeholder="Intro"></div>
+                        <div class="form-group"><input class="form-control item" name="price" type="text" id="Price" placeholder="Price"></div>
+                        <div class="form-group"><input class="form-control item" name="img" type="text" id="Inglocation" placeholder="Inglocation"></div>
+                    
+                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary btn-success" type="submit">確定新增</button></div>                
                     </form>
                 </div>
-                <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary btn-success" type="button">確定新增</button></div>
+                
             </div>
         </div>
     </div>
@@ -116,17 +120,23 @@
                 <div class="modal-body">
                     <h4 style="color: var(--blue);font-weight: bold;text-align: center;">編輯</h4>
                     <hr>
-                    <form>
-                        <div class="form-group"><input class="form-control item" type="text" id="ID-1" placeholder="ID"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="ProductCategory_ID-2" placeholder="ProductCategory_ID"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="FaceCategory_ID-2" placeholder="FaceCategory_ID"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Name-2" placeholder="Name"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Intro-2" placeholder="Intro"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Price-2" placeholder="Price"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Inglocation-2" placeholder="Inglocation"></div>
+                    <form action="<?php echo URLROOT; ?>/admins/modifyProduct" method="POST">
+                        <div class="form-group"><input class="form-control item" name="id" type="text" id="ID-1" placeholder="ID"></div>
+                        <div class="form-group"><input class="form-control item" name="category_id" type="text" id="ProductCategory_ID-2" placeholder="ProductCategory_ID"></div>
+                        <div class="form-group"><input class="form-control item" name="facecategory_id" type="text" id="FaceCategory_ID-2" placeholder="FaceCategory_ID"></div>
+                        <div class="form-group"><input class="form-control item" name="name" type="text" id="Name-2" placeholder="Name"></div>
+                        <div class="form-group"><input class="form-control item" name="intro" type="text" id="Intro-2" placeholder="Intro"></div>
+                        <div class="form-group"><input class="form-control item" name="price" type="text" id="Price-2" placeholder="Price"></div>
+                        <div class="form-group"><input class="form-control item" name="img" type="text" id="Inglocation-2" placeholder="Inglocation"></div>
+                    
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button>
+                            <button class="btn btn-primary" type="submit">確定更改</button>
+                        </div>
+                    
                     </form>
                 </div>
-                <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary" type="button">確定更改</button></div>
+                
             </div>
         </div>
     </div>
@@ -136,13 +146,17 @@
                 <div class="modal-body">
                     <h4 style="color: var(--red);font-weight: bold;text-align: center;">刪除</h4>
                     <hr>
-                    <form>
+                    <form action="<?php echo URLROOT; ?>/admins/deleteProduct" method="POST">
                         <div class="form-group">
                             <h4 style="color: var(--red);font-weight: bold;text-align: center;"><span style="color: rgb(51, 51, 51);">確定要刪除?</span></h4>
+                        
+                            <input type="hidden" name="id" id="ready_to_delete" value="">
                         </div>
+
+                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary btn-danger" type="submit">確定刪除</button></div>
                     </form>
                 </div>
-                <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary btn-danger" type="button">確定刪除</button></div>
+                
             </div>
         </div>
     </div>
@@ -159,6 +173,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo URLROOT; ?>/admin_assets/js/sidebar.js"></script>
     <script src="<?php echo URLROOT; ?>/admin_assets/js/Table-With-Search.js"></script>
+
+    <script>
+
+        $('#exampleModal-Edit').on('show.bs.modal', e => {
+            var $button = $(e.relatedTarget);
+
+            $('#ID-1').val($button.closest('td').prev().prev().prev().prev().prev().prev().prev().text().trim());
+            $('#ProductCategory_ID-2').val($button.closest('td').prev().prev().prev().prev().prev().prev().text().trim());
+            $('#FaceCategory_ID-2').val($button.closest('td').prev().prev().prev().prev().prev().text().trim());
+            $('#Name-2').val($button.closest('td').prev().prev().prev().prev().text().trim());
+            $('#Intro-2').val($button.closest('td').prev().prev().prev().text().trim());
+            $('#Price-2').val($button.closest('td').prev().prev().text().trim());
+            $('#Inglocation-2').val($button.closest('td').prev().text().trim());
+            
+        
+        });
+
+        $('#exampleModal-Delete').on('show.bs.modal', e => {
+            var $button = $(e.relatedTarget);
+            $('#ready_to_delete').val($button.closest('td').prev().prev().prev().prev().prev().prev().prev().text().trim());
+        
+        });
+
+        
+        
+
+    </script>
+
+
 </body>
 
 </html>
