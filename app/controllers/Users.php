@@ -4,6 +4,10 @@
             $this->userModel = $this->model('User');
         }
 
+        public function product(){
+            $this->view('users/product');
+        }
+
 
         public function signed(){
             $this->view('pages/dashboard');
