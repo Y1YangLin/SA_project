@@ -178,7 +178,7 @@
                                     <h4 class="text-truncate text-center"><?php echo $arr->Product_name ;?></h4>
                                 </div>
                                 <div class="col-12">
-                                    <p class="product-description"><?php echo $arr->Product_intro?></p>
+                                    <p class="text-truncate product-description"><?php echo $arr->Product_intro?></p>
                                 </div>
                             </div>
                         </div>
@@ -229,7 +229,7 @@
             </div>
 
             
-            <div class="col product_for_collection gy-3 px-5" id="product_for_collection" style="display: none;">
+            <div class="col product_for_collection gy-3 px-5 col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9" id="product_for_collection" style="display: none;">
                 <div class="row g-4 gx-5 row-cols-1 row-cols-md-3">
                 <?php echo empty($data['collection']) ? "沒有收藏 快去收 ! " : '' ;?>
                 <?php foreach($data['collection'] as $arr) { ?>
@@ -238,12 +238,12 @@
                     <div class="col-12 col-md-4" data-aos="fade-up" id="product-item-animation-element-slide-top-left">
                         <div class="d-flex flex-column justify-content-xxl-start product-container">
                             <div class="row" style="box-shadow: 2px 2px 5px 2px;">
-                                <div class="col"><img class="rounded img-fluid d-block w-100 fit-cover" style="max-width: 100%;height: auto;" src="../MemberCenter_assets/img/商品照1.jpg"></div>
+                                <div class="col"><img class="rounded img-fluid d-block w-100 fit-cover" style="max-width: 100%;height: auto;" src="<?php echo 'http://34.81.132.111/html' . substr($arr->Product_imglocation, 2) ;?>"></div>
                                 <div class="col-8 col-xxl-12 text-center col-12" style="text-overflow: ellipsis;">
                                     <h4 class="text-truncate text-center"><?php echo $arr->Product_name?></h4>
                                 </div>
-                                <div class="col-12">
-                                    <p class="product-description"><?php echo $arr->Product_intro?></p>
+                                <div class="">
+                                    <p class="text-truncate product-description"><?php echo $arr->Product_intro?></p>
                                 </div>
                             </div>
                         </div>
