@@ -44,7 +44,7 @@
                     <div class="dropdown-menu" data-bs-popper="none"><a class="dropdown-item" href="services.html">膚質分析</a><a class="dropdown-item" href="#">商品比價</a></div>
                 </div>
                 <div class="dropdown" style="margin-left: 763px;"><a class="dropdown-toggle fs-4 link-dark" aria-expanded="true" data-bs-toggle="dropdown" href="#" style="padding-bottom: 0px;margin-bottom: -1px;padding-top: 0px;"><i class="fa fa-user-circle"></i>&nbsp;</a>
-                    <div class="dropdown-menu dropdown-menu-end" data-bs-popper="none"><a class="dropdown-item" href="#">更改會員資料</a><a class="dropdown-item" href="<?php echo URLROOT; ?>/users/logout">登出</a></div>
+                    <div class="dropdown-menu dropdown-menu-end" data-bs-popper="none"><a class="dropdown-item" href="<?php echo URLROOT;?>/users/MemberCenter">更改會員資料</a><a class="dropdown-item" href="<?php echo URLROOT; ?>/users/logout">登出</a></div>
                 </div>
             </div>
         </div>

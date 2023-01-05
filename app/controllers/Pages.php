@@ -16,7 +16,9 @@
             $this->view('pages/dashboard');
         }
 
-        
+        public function membercenter(){
+            $this->view('pages/membercenter');
+        }
 
     }
 

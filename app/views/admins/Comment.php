@@ -100,7 +100,7 @@
                         <div class="form-group"><input class="form-control item" name="member_id" type="text" id="Member_ID" placeholder="Member_ID"></div>
                         <div class="form-group"><input class="form-control item" name="product_id" type="text" id="Product_ID" placeholder="Product_ID"></div>
                         <div class="form-group"><input class="form-control item" name="content" type="text" id="Content" placeholder="Content"></div>
-                        <div class="form-group"><input class="form-control item" name="date" type="datetime-local" id="Date" placeholder="Date"></div>
+                        <div class="form-group"><input class="form-control item" name="date" type="date" id="Date" placeholder="Date"></div>
                     
                         <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary btn-success" type="submit">確定新增</button></div>
                     </form>
@@ -120,7 +120,7 @@
                         <div class="form-group"><input class="form-control item" name="member_id" type="text" id="Member_ID2" placeholder="Member_ID"></div>
                         <div class="form-group"><input class="form-control item" name="product_id" type="text" id="Product_ID2" placeholder="Product_ID"></div>
                         <div class="form-group"><input class="form-control item" name="content" type="text" id="Content2" placeholder="Content"></div>
-                        <div class="form-group"><input class="form-control item" name="date" type="datetime-local" id="Date2" placeholder="Date"></div>
+                        <div class="form-group"><input class="form-control item" name="date" type="date" id="Date2" placeholder="Date"></div>
                     
                         <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary" type="submit">確定更改</button></div>
                     </form>

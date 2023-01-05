@@ -1,0 +1,11 @@
+mainpicture {
+  left: 120px;
+  position: absolute;
+  z-index: 1;
+}
+
+facetype {
+  position: absolute;
+  z-index: 2;
+}
+

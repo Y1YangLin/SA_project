@@ -47,7 +47,38 @@
             }            
         }
 
+        public function editUserData($data){
+            $this->db->query('UPDATE member SET Member_name = :username, Member_email = :email, Member_birthday = :birthday 
+            WHERE Member_id = :id');
+
+            $this->db->bind(':id', $_SESSION['user_id']);
+            $this->db->bind(':username', $data['username']);
+            $this->db->bind(':email', $data['email']);
+            $this->db->bind(':birthday', $data['birthday']);
+
+            if($this->db->execute()){
+                return true;
+            }else{
+                return false;
+            }
+
+        }
         
+        public function editUserpwd($data){
+            $this->db->query('UPDATE member SET Member_password = :newPwd WHERE Member_id = :id');
+
+
+            
+            $this->db->bind(':id', $_SESSION['user_id']);
+            $this->db->bind(':newPwd', $data['newPwd']);
+
+            if($this->db->execute()){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
         public function findUserByUsername($username){
             $this->db->query('SELECT * FROM member WHERE Member_name = :username');
             $this->db->bind(':username', $username);
@@ -75,6 +106,27 @@
             } else {
                 return false;
             }
+        }
+
+        public function getUserDataById($id){
+            $this->db->query('SELECT * FROM member WHERE Member_id = :id ');
+            $this->db->bind(':id', $id);
+        
+            $row = $this->db->single();
+            
+            return $row;
+        }   
+
+        public function getUserLikedItems($id){
+
+        }
+
+        public function getUserComment($id){
+
+        }
+
+        public function getUserCollection($id){
+
         }
 
     }

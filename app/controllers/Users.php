@@ -165,6 +165,109 @@
                         
         }
 
+        public function MemberCenter(){
+
+            // echo $_SESSION['user_id'];
+            // exit;
+
+            $user = $this->userModel->getUserDataById($_SESSION['user_id']);
+            $
+
+
+            $data = [
+                'user' => $user,
+                'like' => '',
+            
+            ];
+            // print_r($data);
+            // exit;
+
+            $this->view('pages/membercenter', $data);
+        }
+
+        public function editMemberData(){
+
+            $_POST = filter_input_array(INPUT_POST,FILTER_DEFAULT);
+
+                
+                $data =[
+                    'username' => trim($_POST['name']),
+                    'email' => trim($_POST['email']),
+                    'birthday' => trim($_POST['bd']),
+                ];
+            if($this->userModel->editUserData($data)){
+
+                $this->MemberCenter();
+
+            }else{
+                die('edit failed .. ');
+            }
+            
+        }
+
+        public function editMemberPwd(){
+            $_POST = filter_input_array(INPUT_POST,FILTER_DEFAULT);
+
+                
+                $data =[
+                    'oldPwd' => trim($_POST['oldPwd']),
+                    'newPwd' => trim($_POST['newPwd']),
+                    'newPwd2' => trim($_POST['newPwd2']),
+
+                    'pwd_err' => '',
+
+                ];
+
+            $userdata = $this->userModel->getUserDataById($_SESSION['user_id']);
+
+            if(empty($data['oldPwd']) || empty($data['newPwd']) || empty($data['newPwd2'])){
+                $data['pwd_err'] = '密碼不能為空喔 !';
+            }
+
+            if($data['newPwd'] != $data['newPwd2']){
+                $data['pwd_err'] = '密碼不對==';
+
+            }
+
+            
+            if(empty($data['pwd_err'])){
+                // echo 'test';
+                
+                if(password_verify($data['oldPwd'], $userdata->Member_password)){
+                        $data['newPwd'] = password_hash($data['newPwd'], PASSWORD_DEFAULT);
+                        if($this->userModel->editUserpwd($data)){
+                            $this->MemberCenter();
+
+                        }else{
+                            die('edit failed .. ');
+                        }
+                
+                }else{
+                    $data['pwd_err'] = '密碼不對喔 ==';
+                    echo $data['pwd_err'];
+                    exit;
+                }
+            }else{
+                // print_r($data);
+                // exit;
+                $this->MemberCenter();
+                
+            }
+            
+        }
+
+        public function getLikeRecord(){
+
+        }
+
+        public function getCollectionRecord(){
+
+        }
+
+        public function getCommentRecord(){
+            
+        }
+
         public function createUserSession($user){
             $_SESSION['user_id'] = $user->Member_id;
             $_SESSION['user_email'] = $user->Member_email;
@@ -174,7 +277,7 @@
             // $_SESSION['user_id'] = $user->id;
             redirect('pages/dashboard');
 
-            $this->view('pages/dashboard', $data);
+            // $this->view('pages/dashboard', $data);
 
         }
 
