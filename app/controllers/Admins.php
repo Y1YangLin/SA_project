@@ -498,10 +498,10 @@
                 $data = [
                     // 'id' => trim($_POST['id']),
                     'id' => trim($_POST['id']),
-                    'member_id' => trim($_POST['member_id']),
-                    'product_id' => trim($_POST['product_id']),
+                    'member_id' => trim($_POST['manager_id']),
+                    // 'product_id' => trim($_POST['product_id']),
                     'content' => trim($_POST['content']),
-                    'date' => trim($_POST['date']),
+                    // 'date' => trim($_POST['date']),
                     
 
 
@@ -514,25 +514,7 @@
 
                 ];
             
-                if(empty($data['id'])){
-                    $data['id_err'] = '請輸入產品ID !';
-                }
-
-                if(empty($data['member_id'])){
-                    $data['member_id_err'] = '請輸入膚質ID !';
-                }
-
-                if(empty($data['product_id'])){
-                    $data['product_id_err'] = '請輸入產品名稱 !';
-                }
-            
-                if(empty($data['content'])){
-                    $data['content_err'] = '請輸入intro !';
-                }
-
-                if(empty($data['date'])){
-                    $data['date_err'] = '請輸入價錢 !';
-                }
+                
 
             
             }
@@ -601,7 +583,7 @@
             }
             
             
-            if(empty($data['category_id_err']) && empty($data['facecategory_id_err']) && empty($data['name_err']) && empty($data['intro_err']) && empty($data['price_err']) && empty($data['img_err'])){
+            
                 
                 
                 if($this->adminModel->modifyComment($data)){
@@ -611,7 +593,7 @@
                 }
 
 
-            }
+            
 
         }
 
@@ -642,6 +624,140 @@
         }
 
         //Questionnaire
+
+        public function addQuestionnaire(){
+
+            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                $_POST = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+                
+                
+                $data = [
+                    // 'id' => trim($_POST['id']),
+                    'id' => trim($_POST['id']),
+                    'member_id' => trim($_POST['manager_id']),
+                    // 'product_id' => trim($_POST['product_id']),
+                    'content' => trim($_POST['content']),
+                    // 'date' => trim($_POST['date']),
+                    
+
+
+                    'id_err' => '',
+                    'member_id_err' => '',
+                    'product_id_err' => '',
+                    'content_err' => '',
+                    'date_err' => '',
+                    
+
+                ];
+            
+                
+
+            
+            }
+
+            
+            
+                
+                
+                if($this->adminModel->addComment($data)){
+                    $this->Comment();
+                }else{
+                    die('add Comment failed');
+                }
+
+
+            
+
+
+        }
+
+        public function modifyQuestionnaire(){
+
+            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                $_POST = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+                
+                
+                $data = [
+                    // 'id' => trim($_POST['id']),
+                    'id' => trim($_POST['id']),
+                    'member_id' => trim($_POST['member_id']),
+                    'product_id' => trim($_POST['product_id']),
+                    'content' => trim($_POST['content']),
+                    'date' => trim($_POST['date']),
+                    
+
+
+                    'id_err' => '',
+                    'member_id_err' => '',
+                    'product_id_err' => '',
+                    'content_err' => '',
+                    'date_err' => '',
+                    
+
+                ];
+            
+                if(empty($data['id'])){
+                    $data['id_err'] = '請輸入評論ID !';
+                }
+
+                if(empty($data['member_id'])){
+                    $data['member_id_err'] = '請輸入會員ID !';
+                }
+
+                if(empty($data['product_id'])){
+                    $data['product_id_err'] = '請輸入產品ID !';
+                }
+            
+                if(empty($data['content'])){
+                    $data['content_err'] = '請輸入內容 !';
+                }
+
+                if(empty($data['date'])){
+                    $data['date_err'] = '請輸入日期 !';
+                }
+
+            }
+            
+            
+            if(empty($data['category_id_err']) && empty($data['facecategory_id_err']) && empty($data['name_err']) && empty($data['intro_err']) && empty($data['price_err']) && empty($data['img_err'])){
+                
+                
+                if($this->adminModel->modifyComment($data)){
+                    $this->Comment();
+                }else{
+                    die('add Comment failed');
+                }
+
+
+            }
+
+        }
+
+        public function deleteQuestionnaire(){
+
+            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                $_POST = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+                
+                // 刪除會員的資料
+                $data = [
+                    'id' => trim($_POST['id']),
+                                    
+                ];
+            
+                
+            }
+            
+            
+            if($this->adminModel->deleteComment($data)){
+
+
+                $this->Comment();
+
+            }else{
+                die('delete Comment failed !');
+            }
+
+        }
 
         public function Comment(){
 
@@ -695,11 +811,10 @@
 
         public function Logout(){
 
-            $data = [
-
-            ];
+            unset($_SESSION['admin_id']);
+            unset($_SESSION['admin_email']);
             
-            $this->view('admins/Logout', $data);
+            $this->view('users/login', $data);
 
         }
 

@@ -144,3 +144,8 @@ body {
   margin: 7px 5px;
 }
 
+.nav-link:focus, .nav-link:hover {
+  background-color: #ff0000;
+  text-decoration: none;
+}
+

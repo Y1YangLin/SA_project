@@ -210,7 +210,7 @@
                                                         <hr>
                                                     </div>
                                                     <div class="col btn_collection-1"><a href="#" style="text-decoration:none">
-                                                            <h4 class="text-nowrap" style="text-align: center;color: var(--bs-gray-900);font-weight: bold;"><?php echo $arr->ProductCategory_type ;?></h4>
+                                                            <h4 class="text-nowrap" style="text-align: center;color: var(--bs-gray-900);font-weight: bold;"><?php echo $arr->ProductCategory_type?></h4>
                                                         </a></div>
                                                 </div>
                                             </li>
@@ -231,7 +231,7 @@
             
             <div class="col product_for_collection gy-3 px-5" id="product_for_collection" style="display: none;">
                 <div class="row g-4 gx-5 row-cols-1 row-cols-md-3">
-                <?php //echo empty($data['collection']) ? "沒有收藏 快去收 ! " : '' ;?>
+                <?php echo empty($data['collection']) ? "沒有收藏 快去收 ! " : '' ;?>
                 <?php foreach($data['collection'] as $arr) { ?>
 
                 

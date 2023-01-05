@@ -238,6 +238,57 @@
 
         //Questionnaire
 
+        public function addQuestionnaire($data){
+            $this->db->query('INSERT INTO qquestion (QQuestion_Questionnaire_id , QQuestion_Manager_id , QQuestion_content) VALUES 
+            (:member_id, :manager_id, :content)');
+
+            $this->db->bind(':id', $data['id']);
+            $this->db->bind(':manager_id', $data['manager_id']);
+            
+            $this->db->bind(':content', $data['content']);
+            
+
+            if($this->db->execute()){
+                return true;
+            }else{
+                return false;
+            }
+
+        }
+
+        public function modifyQuestionnaire($data){
+            $this->db->query('UPDATE qquestion SET QQuestion_content = contents WHERE QQuestion_id  = :id');
+
+            $this->db->bind(':member_id', $data['id']);
+            $this->db->bind(':product_id', $data['manager_id']);
+            
+            $this->db->bind(':contents', $data['content']);
+
+            if($this->db->execute()){
+                return true;
+            }else{
+                return false;
+            }
+
+
+        }
+
+        public function deleteQuestionnaire($data){
+
+            $this->db->query('DELETE FROM qquestion WHERE QQuestion_id  = :id');
+
+            $this->db->bind(':id', $data['id']);
+            
+            
+            
+
+            if($this->db->execute()){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
         // getMethods
         public function getAllMember(){
 

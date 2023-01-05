@@ -4,36 +4,38 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>管理者介面</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Akaya%20Kanadaka.css">
-    <link rel="stylesheet" href="assets/css/Lora.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="assets/css/Article-Clean.css">
-    <link rel="stylesheet" href="assets/css/Data-Table-with-Search-Sort-Filter-and-Zoom-using-TableSorter.css">
+    <title>評論_管理者</title>
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akaya+Kanadaka&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora&amp;display=swap">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/animate.min.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/Data-Table-with-Search-Sort-Filter-and-Zoom-using-TableSorter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
-    <link rel="stylesheet" href="assets/css/Plus_Input.css">
-    <link rel="stylesheet" href="assets/css/sidebar.css">
-    <link rel="stylesheet" href="assets/css/Table-With-Search-search-table.css">
-    <link rel="stylesheet" href="assets/css/Table-With-Search.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/Plus_Input.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/sidebar.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/Table-With-Search-search-table.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/Table-With-Search.css">
 </head>
 
 <body style="background: #fae9ba;">
     <ul class="nav flex-column shadow d-flex sidebar mobile-hid" style="background: #894e18;">
         <li class="nav-item logo-holder" style="background: #fae9ba;">
-            <div class="text-center text-white logo py-4 mx-4"><a class="text-white text-decoration-none" id="title" href="YOFU.html"><strong><span style="color: rgb(0, 0, 0);">YOFU</span></strong></a><a class="text-white float-right" id="sidebarToggleHolder" href="#"><i class="fas fa-bars" id="sidebarToggle" style="color: rgb(0,0,0);"></i></a></div>
-        </li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="Product.html" style="background: #894e18;"><i class="fas fa-archive mx-3"></i><span class="text-nowrap mx-2">商品</span></a></li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="Member.html" style="background: #894e18;"><i class="fas fa-user mx-3"></i><span class="text-nowrap mx-2">會員</span></a></li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="Commit.html" style="background: #894e18;"><i class="fas fa-pen-alt mx-3"></i><span class="text-nowrap mx-2">評論</span></a></li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="Questionnaire.html" style="background: #894e18;"><i class="fas fa-chart-bar mx-3"></i><span class="text-nowrap mx-2">問卷</span></a></li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="Manager.html" style="background: #894e18;"><i class="far fa-star mx-3"></i><span class="text-nowrap mx-2">管理者</span></a></li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="Logout.html" style="background: #894e18;"><i class="fas fa-sign-out-alt mx-3"></i><i class="fa fa-caret-right d-none position-absolute"></i><span class="text-nowrap mx-2">登出</span></a></li>
+            <div class="text-center text-white logo py-4 mx-4"><a class="text-white text-decoration-none" id="title" href="<?php echo URLROOT;?>/admins/YOFU"><strong><span style="color: rgb(0, 0, 0);">YOFU</span></strong></a><a class="text-white float-right" id="sidebarToggleHolder" href="#"><i class="fas fa-bars" id="sidebarToggle" style="color: rgb(0,0,0);"></i></a></div>
+            </li>
+        <li class="nav-item"></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Product" style="background: #894e18;"><i class="fas fa-archive mx-3"></i><span class="text-nowrap mx-2">商品</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Member" style="background: #894e18;"><i class="fas fa-user mx-3"></i><span class="text-nowrap mx-2">會員</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Comment" style="background: rgb(137,78,24);"><i class="fas fa-pen-alt mx-3"></i><span class="text-nowrap mx-2">評論</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Questionnaire" style="background: #894e18;"><i class="fas fa-chart-bar mx-3"></i><span class="text-nowrap mx-2">問卷</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Manager" style="background: #894e18;"><i class="far fa-star mx-3"></i><span class="text-nowrap mx-2">管理者</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Logout" style="background: #894e18;"><i class="fas fa-sign-out-alt mx-3"></i><i class="fa fa-caret-right d-none position-absolute"></i><span class="text-nowrap mx-2">登出</span></a></li>
     </ul>
-    <div class="container article-clean">
+    <div class="container rubberBand animated article-clean">
         <div class="row" style="background: #fae9ba;">
             <div class="col" style="margin-top: 40px;margin-bottom: 40px;">
                 <h1 class="text-center" style="font-size: 30px;font-family: 'Akaya Kanadaka', serif;"><strong><span style="color: rgb(137, 78, 24);">QUESTIONNAIRE</span></strong></h1>
@@ -52,6 +54,7 @@
                         <thead class="bill-header cs">
                             <tr>
                                 <th id="trs-hd-1" class="col-1" style="background: #894e18;">ID</th>
+                                <th id="trs-hd-2" class="col-1" style="background: #894e18;">Questionnaire_ID</th>
                                 <th id="trs-hd-2" class="col-1" style="background: #894e18;">Manager_ID</th>
                                 <th id="trs-hd-3" class="col-9" style="background: #894e18;">Content</th>
                                 <th id="trs-hd-6" class="col-1" style="background: #894e18;">Action</th>
@@ -61,19 +64,19 @@
                             <tr class="warning no-result">
                                 <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
                             </tr>
-                                    
+                            
 
-                                    <?php foreach($data as $arr){ ?>
+                            <?php foreach($data as $arr){ ?>
                             <tr>
-                                                <td> <?php echo $arr->QQuestion_id ;?> </td>
-                                                <td> <?php echo $arr->QQuestion_Questionnaire_id ;?> </td>
-                                                <td> <?php echo $arr->QQuestion_Manager_id ;?> </td>
-                                                <td> <?php echo $arr->QQuestion_content ;?> </td>
+                                                <td class="text-nowrap text-center" style="background: #ffffff;"> <?php echo $arr->QQuestion_id ;?> </td>
+                                                <td class="text-nowrap text-center" style="background: #ffffff;"> <?php echo $arr->QQuestion_Questionnaire_id ;?> </td>
+                                                <td class="text-nowrap text-center" style="background: #ffffff;"> <?php echo $arr->QQuestion_Manager_id ;?> </td>
+                                                <td class="text-break" style="background: #ffffff;"> <?php echo $arr->QQuestion_content ;?> </td>
                                                 
-                                                <td>
+                                                <td class="text-nowrap text-center justify-content-center" style="background: #ffffff;">
                                                 <div class="btn-group">
-                                                    <button class="btn btn-success" style="margin-left:5px;background:var(--blue);" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size:11px;"></i></button>
-                                                    <button class="btn btn-danger" style="margin-left:5px;" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-trash" style="font-size:15px;"></i></button>
+                                                    <button class="btn btn-success" style="margin-left: 5px;background: #a4aedc;" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size:11px;"></i></button>
+                                                    <button class="btn btn-danger" style="margin-left: 5px;background: #e37883;" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-trash" style="font-size:15px;"></i></button>
                                                 </div>
                                                 </td>
                                             
@@ -83,7 +86,7 @@
                                         
 
                                     ?>
-                                    
+
                         </tbody>
                     </table>
                 </div>
@@ -94,31 +97,49 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h4 style="font-weight: bold;text-align: center;color: var(--green);">新增</h4>
+                    <h4 style="font-weight: bold;text-align: center;color: #deae75;font-family: 'Akaya Kanadaka', serif;">ADD</h4>
                     <hr>
                     <form action="<?php echo URLROOT; ?>/admins/addQuestionnaire" method="POST">
-                        <div class="form-group"><input class="form-control item" type="text" id="ID" placeholder="ID"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Manager_ID" placeholder="Manager_ID"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Content" placeholder="Content"></div>
-                    
-                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary btn-success" type="submit">確定新增</button></div>
+
+                        <div class="form-group"><input class="form-control item" type="text" name="id" id="ID" placeholder="ID"></div>
+                        <div class="form-group"><input class="form-control item" type="text" name="manager_id" id="Manager_ID" placeholder="Manager_ID"></div>
+                        <div class="form-group"><input class="form-control item" type="text" name="content" id="Content" placeholder="Content"></div>
+                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal" style="font-family: 'Akaya Kanadaka', serif;">CLOSE</button><button class="btn btn-primary btn-success" type="submit" style="font-family: 'Akaya Kanadaka', serif;background: #deae75;">CONFIRM</button></div>
                     </form>
                 </div>
                 
             </div>
         </div>
     </div>
-    
     <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal-Edit" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h4 style="color: var(--blue);font-weight: bold;text-align: center;">編輯</h4>
+                    <h4 style="color: #a4aedc;font-weight: bold;text-align: center;font-family: 'Akaya Kanadaka', serif;">EDIT</h4>
                     <hr>
                     <form action="<?php echo URLROOT; ?>/admins/modifyQuestionnaire" method="POST">
-                        <div class="form-group"><input class="form-control item" type="text" id="ID-2" placeholder="ID"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Manager_ID-2" placeholder="Manager_ID"></div>
-                        <div class="form-group"><input class="form-control item" type="text" id="Content-2" placeholder="Content"></div>
+                        <div class="form-group"><input class="form-control item" type="text" name="questionnaire_id" id="ID2" placeholder="Questionnaire_ID"></div>
+                        <div class="form-group"><input class="form-control item" type="text" name="manager_id" id="Manager_ID2" placeholder="Manager_ID"></div>
+                        <div class="form-group"><input class="form-control item" type="text" name="content" id="Content2" placeholder="Content"></div>
+                        <div class="modal-footer"><button class="btn btn-secondary" type="submit" data-bs-dismiss="modal" style="font-family: 'Akaya Kanadaka', serif;">CLOSE</button><button class="btn btn-primary" type="button" style="font-family: 'Akaya Kanadaka', serif;background: #a4aedc;">CONFIRM</button></div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal-Delete" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 style="color: #e37883;font-weight: bold;text-align: center;font-family: 'Akaya Kanadaka', serif;">DELETE</h4>
+                    <hr>
+                    <form action="<?php echo URLROOT; ?>/admins/deleteQuestionnaire" method="POST">
+                        <div class="form-group">
+                            <h4 style="color: var(--red);font-weight: bold;text-align: center;font-family: 'Akaya Kanadaka', serif;"><span style="color: rgb(51, 51, 51);">ARE YOU SURE?</span></h4>
+                        </div>
+                        <input type="hidden" name="id" id="ready_to_delete" value="">
+                        <div class="modal-footer"><button class="btn btn-secondary" type="submit" data-bs-dismiss="modal" style="font-family: 'Akaya Kanadaka', serif;">CLOSE</button><button class="btn btn-primary btn-danger" type="submit" style="font-family: 'Akaya Kanadaka', serif;background: #e37883;">DELETE</button></div>
                     </form>
                 </div>
                 
@@ -126,22 +147,7 @@
         </div>
     </div>
 
-    <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal-Delete" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <h4 style="color: var(--red);font-weight: bold;text-align: center;">刪除</h4>
-                    <hr>
-                    <form action="<?php echo URLROOT; ?>/admins/deleteQuestionnaire" method="POST">
-                        <div class="form-group">
-                            <h4 style="color: var(--red);font-weight: bold;text-align: center;"><span style="color: rgb(51, 51, 51);">確定要刪除?</span></h4>
-                        </div>
-                    </form>
-                </div>
-                
-            </div>
-        </div>
-    </div>
+
     <script src="<?php echo URLROOT; ?>/admin_assets/js/jquery.min.js"></script>
     <script src="<?php echo URLROOT; ?>/admin_assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?php echo URLROOT; ?>/admin_assets/js/bs-init.js"></script>
@@ -160,16 +166,16 @@
 
         $('#exampleModal-Edit').on('show.bs.modal', e => {
             var $button = $(e.relatedTarget);
-            $('#ID-2').val($button.closest('td').prev().prev().prev().trim());
-            $('#Manager_ID-2').val($button.closest('td').prev().prev().trim());
-            $('#Content-2').val($button.closest('td').prev().text().trim());
+            $('#ID2').val($button.closest('td').prev().prev().prev().text().trim());
+            $('#Manager_ID2').val($button.closest('td').prev().prev().text().trim());
+            $('#Content2').val($button.closest('td').prev().text().trim());
 
 
         });
 
         $('#exampleModal-Delete').on('show.bs.modal', e => {
             var $button = $(e.relatedTarget);
-            $('#ready_to_delete').val($button.closest('td').prev().prev().prev().prev().prev().text().trim());
+            $('#ready_to_delete').val($button.closest('td').prev().prev().prev().prev().text().trim());
         
         });
 
@@ -177,7 +183,6 @@
         
 
     </script>
-
 
 </body>
 

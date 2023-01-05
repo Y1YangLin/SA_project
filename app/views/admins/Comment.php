@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>評論_管理者</title>
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akaya+Kanadaka&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora&amp;display=swap">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/animate.min.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/Article-Clean.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/Data-Table-with-Search-Sort-Filter-and-Zoom-using-TableSorter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
@@ -21,59 +21,61 @@
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/admin_assets/css/Table-With-Search.css">
 </head>
 
-<body>
-    <ul class="nav flex-column shadow d-flex sidebar mobile-hid">
-        <li class="nav-item logo-holder">
-            <div class="text-center text-white logo py-4 mx-4"><a class="text-white text-decoration-none" id="title" href="YOFU.html"><strong>YOFU</strong></a><a class="text-white float-right" id="sidebarToggleHolder" href="#"><i class="fas fa-bars" id="sidebarToggle"></i></a></div>
+<body style="background: rgb(250, 233, 186);font-weight: bold;">
+    <ul class="nav flex-column shadow d-flex sidebar mobile-hid" style="background: #894e18;">
+        <li class="nav-item logo-holder" style="background: rgb(250, 233, 186);">
+            <div class="text-center text-white logo py-4 mx-4"><a class="text-white text-decoration-none" id="title" href="<?php echo URLROOT;?>/admins/YOFU" style="color: rgb(0,0,0);"><span style="color: rgb(0, 0, 0);">YOFU</span></a><a class="text-white float-right" id="sidebarToggleHolder" href="#"><i class="fas fa-bars" id="sidebarToggle" style="color: rgb(0,0,0);"></i></a></div>
         </li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Product"><i class="fas fa-archive mx-3"></i><span class="text-nowrap mx-2">商品</span></a></li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Member"><i class="fas fa-user mx-3"></i><span class="text-nowrap mx-2">會員</span></a></li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Comment"><i class="fas fa-pen-alt mx-3"></i><span class="text-nowrap mx-2">評論</span></a></li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Questionnaire"><i class="fas fa-chart-bar mx-3"></i><span class="text-nowrap mx-2">問卷</span></a></li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Manager"><i class="far fa-star mx-3"></i><span class="text-nowrap mx-2">管理者</span></a></li>
-        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-left text-white py-1 px-0 position-relative" aria-expanded="false" data-toggle="dropdown" href="#"><i class="fas fa-sliders-h mx-3"></i><span class="text-nowrap mx-2">設定</span><i class="fas fa-caret-down float-none float-lg-right fa-sm"></i></a>
-            <div class="dropdown-menu border-0 animated fadeIn"><a class="dropdown-item text-white" href="#"><span>Change password</span></a><a class="dropdown-item text-white" href="#"><span>Change email</span></a><a class="dropdown-item text-white" href="#"><span>More</span></a></div>
-        </li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Logout"><i class="fas fa-sign-out-alt mx-3"></i><i class="fa fa-caret-right d-none position-absolute"></i><span class="text-nowrap mx-2">登出</span></a></li>
+        <li class="nav-item"></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Product" style="background: #894e18;"><i class="fas fa-archive mx-3"></i><span class="text-nowrap mx-2">商品</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Member" style="background: #894e18;"><i class="fas fa-user mx-3"></i><span class="text-nowrap mx-2">會員</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Comment" style="background: rgb(137,78,24);"><i class="fas fa-pen-alt mx-3"></i><span class="text-nowrap mx-2">評論</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Questionnaire" style="background: #894e18;"><i class="fas fa-chart-bar mx-3"></i><span class="text-nowrap mx-2">問卷</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Manager" style="background: #894e18;"><i class="far fa-star mx-3"></i><span class="text-nowrap mx-2">管理者</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="<?php echo URLROOT; ?>/admins/Logout" style="background: #894e18;"><i class="fas fa-sign-out-alt mx-3"></i><i class="fa fa-caret-right d-none position-absolute"></i><span class="text-nowrap mx-2">登出</span></a></li>
     </ul>
     <div class="container article-clean">
         <div class="row">
-            <div class="col-lg-11 col-xl-8 offset-lg-1 offset-xl-2 rubberBand animated">
-                <div class="text-center intro">
-                    <h1 class="text-center"><strong>評論介面</strong></h1>
-                </div>
-                <div class="text">
-                    <div class="col-md-12 search-table-col"><button class="btn btn-success" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Add"><i class="fas fa-plus" style="font-size:15px;"></i></button>
-                        <div class="form-group d-inline-flex pull-right col-lg-4"><input type="text" class="search form-control" placeholder="Search!"></div><span class="counter pull-right"></span>
-                        <div class="table-responsive table table-hover table-bordered results">
-                            <table class="table table-hover table-bordered">
-                                <thead class="bill-header cs">
-                                    <tr>
-                                        <th id="trs-hd-1" class="col-lg-1">ID</th>
-                                        <th id="trs-hd-2" class="col-lg-2">Member_ID</th>
-                                        <th id="trs-hd-3" class="col-lg-3">Product_ID</th>
-                                        <th id="trs-hd-4" class="col-lg-2">Content</th>
-                                        <th id="trs-hd-5" class="col-lg-2">Date</th>
-                                        <th id="trs-hd-6" class="col-lg-2">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="warning no-result">
-                                        <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
-                                    </tr>
-                        
-                                    <?php foreach($data as $arr){ ?>
+            <div class="col" style="background: rgb(250, 233, 186);">
+                <h1 class="text-center" style="margin-top: 40px;margin-bottom: 40px;font-size: 30px;font-family: 'Akaya Kanadaka', serif;"><strong><span style="color: rgb(113, 65, 9);">COMMENT</span></strong></h1>
+            </div>
+        </div>
+        <div class="row row-cols-2">
+            <div class="col-4 col-md-4 col-xl-2" style="background: rgb(250, 233, 186);"><button class="btn btn-success" style="margin-left: 5px;background: rgb(222,174,117);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Add"><i class="fas fa-plus" style="font-size:15px;"></i></button></div>
+            <div class="col-8 col-md-8 col-lg-8 col-xl-10" style="background: rgb(250, 233, 186);border-color: rgb(0,0,0);border-top-color: rgb(86,;border-right-color: 88,;border-bottom-color: 91);border-left-color: 88,;">
+                <div class="form-group d-inline-flex pull-right col-lg-4"><input type="text" class="search form-control" placeholder="Search!" style="background: rgb(255,255,255);border-color: rgb(211,222,232);color: rgb(237,240,242);"></div>
+            </div>
+        </div>
+        <div class="row font-weight-bolder">
+            <div class="col" style="background: rgb(250, 233, 186);">
+                <div class="table-responsive table table-hover table-bordered results">
+                    <table class="table table-hover table-bordered">
+                        <thead class="bill-header cs">
+                            <tr>
+                                <th id="trs-hd-1" class="col-1" style="background: #894e18;">ID</th>
+                                <th id="trs-hd-2" class="col-1" style="background: #894e18;">Member_ID</th>
+                                <th id="trs-hd-3" class="col-1" style="background: #894e18;">Product_ID</th>
+                                <th id="trs-hd-4" class="col-6" style="background: #894e18;">Content</th>
+                                <th id="trs-hd-5" class="col-2" style="background: #894e18;">Date</th>
+                                <th id="trs-hd-6" class="col-1" style="background: #894e18;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="warning no-result">
+                                <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
+                            </tr>
+                            
+                            <?php foreach($data as $arr){ ?>
                                             <tr>
-                                            <td> <?php echo $arr->ProductComment_id ;?> </td>
-                                            <td> <?php echo  $arr->ProductComment_Member_id ;?> </td>
-                                            <td> <?php echo  $arr->ProductComment_Product_id ;?> </td>
-                                            <td> <?php echo  $arr->ProductComment_content ;?> </td>
-                                            <td> <?php echo  $arr->ProductComment_date ;?> </td>
+                                            <td class="text-nowrap text-center" style="background: #ffffff;"> <?php echo $arr->ProductComment_id ;?> </td>
+                                            <td class="text-nowrap text-center" style="background: #ffffff;"> <?php echo  $arr->ProductComment_Member_id ;?> </td>
+                                            <td class="text-nowrap text-center" style="background: #ffffff;"> <?php echo  $arr->ProductComment_Product_id ;?> </td>
+                                            <td class="text-break text-left" style="font-size: 8px;background: #ffffff;"> <?php echo  $arr->ProductComment_content ;?> </td>
+                                            <td class="text-nowrap text-center" style="background: #ffffff;"> <?php echo  $arr->ProductComment_date ;?> </td>
                                             
-                                            <td>
-                                                <button class="btn btn-success" style="margin-left:5px;background:var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size:11px;"></i></button>
-                                                <button class="btn btn-danger" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-trash" style="font-size:15px;"></i></button>
-                                            </td>
+                                            <td class="text-nowrap" style="background: #ffffff;">
+                                            <button class="btn btn-success" style="margin-left: 5px;background: #a4aedc;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size:11px;"></i></button>
+                                            <button class="btn btn-danger" style="margin-left: 5px;background: rgb(227,120,131);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-trash" style="font-size:15px;"></i></button></td>
                                             </tr>
                                     <?php 
                                         }
@@ -81,10 +83,8 @@
 
                                     ?>
 
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -93,16 +93,16 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h4 style="font-weight: bold;text-align: center;color: var(--green);">新增</h4>
+                    <h4 style="font-weight: bold;text-align: center;color: var(--green);font-family: 'Akaya Kanadaka', serif;"><span style="color: rgb(222, 174, 117);">ADD</span></h4>
                     <hr>
                     <form action="<?php echo URLROOT; ?>/admins/addComment" method="POST">
                         <div class="form-group"><input class="form-control item" name="id" type="text" id="ID" placeholder="ID"></div>
                         <div class="form-group"><input class="form-control item" name="member_id" type="text" id="Member_ID" placeholder="Member_ID"></div>
                         <div class="form-group"><input class="form-control item" name="product_id" type="text" id="Product_ID" placeholder="Product_ID"></div>
                         <div class="form-group"><input class="form-control item" name="content" type="text" id="Content" placeholder="Content"></div>
-                        <div class="form-group"><input class="form-control item" name="date" type="date" id="Date" placeholder="Date"></div>
+                        <div class="form-group"><input class="form-control item" name="date" type="datetime-local" id="Date" placeholder="Date"></div>
                     
-                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary btn-success" type="submit">確定新增</button></div>
+                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal" style="font-family: 'Akaya Kanadaka', serif;">CLOSE</button><button class="btn btn-primary btn-success" type="submit" style="background: #deae75;font-family: 'Akaya Kanadaka', serif;">CONFIRM</button></div>
                     </form>
                 </div>
                 
@@ -113,7 +113,7 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h4 style="color: var(--blue);font-weight: bold;text-align: center;">編輯</h4>
+                    <h4 style="color: #a4aedc;font-weight: bold;text-align: center;font-family: 'Akaya Kanadaka', serif;">EDIT</h4>
                     <hr>
                     <form action="<?php echo URLROOT; ?>/admins/modifyComment" method="POST">
                         <div class="form-group"><input class="form-control item" name="id" type="text" id="ID2" placeholder="ID"></div>
@@ -121,8 +121,8 @@
                         <div class="form-group"><input class="form-control item" name="product_id" type="text" id="Product_ID2" placeholder="Product_ID"></div>
                         <div class="form-group"><input class="form-control item" name="content" type="text" id="Content2" placeholder="Content"></div>
                         <div class="form-group"><input class="form-control item" name="date" type="date" id="Date2" placeholder="Date"></div>
-                    
-                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary" type="submit">確定更改</button></div>
+                        
+                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal" style="font-family: 'Akaya Kanadaka', serif;">CLOSE</button><button class="btn btn-primary" type="submit" style="color: #ffffff;background: #a4aedc;font-family: 'Akaya Kanadaka', serif;">COMFIRM</button></div>
                     </form>
                 </div>
                 
@@ -133,15 +133,15 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h4 style="color: var(--red);font-weight: bold;text-align: center;">刪除</h4>
+                    <h4 style="color: #e37883;font-weight: bold;text-align: center;font-family: 'Akaya Kanadaka', serif;">DELETE</h4>
                     <hr>
                     <form action="<?php echo URLROOT; ?>/admins/deleteComment" method="POST">
                         <div class="form-group">
-                            <h4 style="color: var(--red);font-weight: bold;text-align: center;"><span style="color: rgb(51, 51, 51);">確定要刪除?</span></h4>
+                            <h4 style="color: var(--red);font-weight: bold;text-align: center;font-family: 'Akaya Kanadaka', serif;"><span style="color: rgb(51, 51, 51);">ARE YOU SURE?</span></h4>
                         </div>
                         <input type="hidden" name="id" id="ready_to_delete" value="">
-                    
-                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-primary btn-danger" type="submit">確定刪除</button></div>
+
+                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal" style="font-family: 'Akaya Kanadaka', serif;">CLOSE</button><button class="btn btn-primary btn-danger" type="submit" style="background: #e37883;font-family: 'Akaya Kanadaka', serif;">DELETE</button></div>
                     </form>
                 </div>
                 
