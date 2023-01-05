@@ -721,11 +721,13 @@
         }
 
         public function login(){
+            $this->view('admins/login');
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
             }
         }
+        
 
         // public function logout(){
 

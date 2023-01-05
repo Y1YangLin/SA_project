@@ -31,34 +31,31 @@ if(isset($_SESSION['user_id']) || isset($_SESSION['user_email'])){
     <link rel="stylesheet" href="assets/css/Ludens-Client---Login-Dropdown.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/untitled.css">
+
+    <nav class="bg-light navbar navbar-expand-lg sticky-top">
+        <div class="container d-lg-flex align-items-lg-center"><a class="navbar-brand" href="#" style="font-weight: bold;font-size: 28px;">YOFU</a><button class="navbar-toggler Triger" data-bs-toggle="offcanvas" type="button" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg"><span class="navbar-toggler-icon"></span></button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                <ul class="nav d-flex justify-content-lg-start align-items-lg-center flex-column flex-lg-row navmove" style="font-weight: bold;font-size: 21px;">
+                    <li class="nav-item"><a class="nav-link" href="#" style="color:var(--bs-navbar-hover-color);font-weight:bold;">產品</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo URLROOT;?>/users/login" style="color:var(--bs-navbar-hover-color);font-weight:bold;">膚質分析</a></li>
+                    <li class="nav-item" style="height: 47.5px;"><button class="btn d-flex align-items-center" type="submit" data-bs-toggle="modal" data-bs-target="#Modal-Customerservice" style="font-size: 21px;width: 100%;height: 100%;padding: 8px 16px;font-weight: bold;"><br><strong><span style="color: var(--bs-navbar-hover-color); background-color: rgb(248, 249, 250);">客戶服務</span></strong><br><br></button></li>
+                    <li class="nav-item dropdown"><a class="nav-link" href="<?php echo URLROOT;?>/users/login" style="color: var(--bs-navbar-brand-hover-color);">會員中心</a>
+                        <ol class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">我的帳戶</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">登出</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </head>
 
+
 <body>
-    <nav class="navbar navbar-light navbar-expand-md fixed-top fs-6 text-bg-light navbar-fixed-top navigation-clean-button" style="background: rgb(34, 34, 34);border-radius: 20;border-top-left-radius: 20;border-top-right-radius: 20;border-bottom-right-radius: 20;border-bottom-left-radius: 20;border-style: none;padding-bottom: 0px;padding-top: 0px;margin-right: 0px;">
-        <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div><a class="navbar-brand" href="./index.php"><span class="fw-bold">YOFU</span> </a></div>
-            <div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(255,255,255);margin-left: 6px;">
-                <ul class="navbar-nav nav-right">
-                    <li class="nav-item" style="margin-left: 4px;margin-right: -1px;"><a class="nav-link active link-dark" href="首頁_登入前.html" style="color: rgba(224,217,217,0.9);padding-right: 0px;padding-left: 0px;margin-left: -7px;margin-right: 21px;">首頁</a></li>
-                    <li class="nav-item"><a class="nav-link link-dark" href="about.html" style="color: rgba(224,217,217,0.9);padding-right: 7px;padding-left: 7px;margin-left: -4px;">產品</a></li>
-                    <li class="nav-item"><a class="nav-link link-dark" href="faq.html" style="color: rgba(224,217,217,0.9);margin-right: 9px;">FAQ</a></li>
-                    <li class="nav-item"></li>
-                </ul>
-                <div class="dropdown" style="margin-left: 75%;"><a class="dropdown-toggle fs-4 link-dark" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="padding-bottom: 0px;margin-bottom: -1px;padding-top: 0px;margin-left: 44px;"><i class="fa fa-user"></i>&nbsp;</a>
-                    <div class="dropdown-menu dropdown-menu-end">
-
-                        
-                        
-
-                        
-                        
-                        <a class="dropdown-item" href="<?php echo URLROOT;?>/users/login">註冊/登入</a>
-                        
-
-                    </div>
-                </div>
-            </div>
-    </nav>
     <div class="carousel slide" data-bs-ride="carousel" id="carousel-1" style="height: 600px;margin-top: 40px;">
         <div class="carousel-inner h-100" data-aos="fade-up">
             <div class="carousel-item active h-100" data-aos="fade-left"><img class="w-100 d-block position-absolute h-100 fit-cover" src="assets/img/主畫面.jpg" alt="Slide Image" style="z-index: -1;background-blend-mode: darken;">
@@ -145,7 +142,23 @@ if(isset($_SESSION['user_id']) || isset($_SESSION['user_email'])){
         <p class="hero-subtitle">setting spray</p>
         <p><a class="btn btn-primary btn-lg fs-6 fw-bold text-center text-bg-light border-0 border-white hero-button" role="button" href="./class/product2.html?type=8&p=1">瀏覽更多</a></p>
     </div>
-    <div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="modal fade" role="dialog" tabindex="-1" id="Modal-Customerservice" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 style="font-weight: bold;text-align: center;color: var(--green);">聯絡我們</h4>
+                    <hr>
+                    <form class="text-dark" data-bss-recipient="12223ac6677c1d072c3a5614f27bf1e1">
+                        <div class="form-group mb-3"><input class="form-control" type="text" name="name" placeholder="您的姓名" required=""></div>
+                        <div class="form-group mb-3"><input class="form-control" type="email" name="email" placeholder="您的信箱" required=""></div>
+                        <div class="form-group mb-3"><textarea class="form-control" name="message" placeholder="想說的話" rows="14" required="" minlength="10"></textarea></div>
+                    </form>
+                </div>
+                <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">關閉</button><button class="btn btn-success" type="button" data-bs-dismiss="modal">確認送出</button></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="bg-dark text-secondary px-4 py-5 text-center">
         <div class="py-5">
             <h5 class="fs-3 display-5 fw-bold text-white">目標理念</h5>
             <div class="col-lg-6 mx-auto">
@@ -185,7 +198,8 @@ if(isset($_SESSION['user_id']) || isset($_SESSION['user_email'])){
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+    <?php require_once 'footer.php';?>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/aos.min.js"></script>
     <script src="assets/js/bs-init.js"></script>

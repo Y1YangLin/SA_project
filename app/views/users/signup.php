@@ -29,8 +29,9 @@ header("content-type:text/html;charset=utf-8");
    </head>
    
   <body>
+  <?php require 'header.php';?>
       <section class="position-relative py-4 py-xl-5">
-         <div class="container" style="height: 33px;">
+         <!-- <div class="container" style="height: 33px;">
             <div class="row">
                <div class="col">
                   <nav class="navbar navbar-light navbar-expand-md fixed-top text-bg-light navbar-fixed-top navigation-clean-button" style="background: rgb(34, 34, 34);border-radius: 20;border-top-left-radius: 20;border-top-right-radius: 20;border-bottom-right-radius: 20;border-bottom-left-radius: 20;border-style: none;padding-top: 0;height: 48px;padding-bottom: 0px;margin-top: 3px;">
@@ -54,7 +55,7 @@ header("content-type:text/html;charset=utf-8");
                   </nav>
                </div>
             </div>
-         </div>
+         </div> -->
          <div class="container">
             <?php //print_r($data); ?>
             <div class="row d-flex justify-content-center">
@@ -121,7 +122,7 @@ header("content-type:text/html;charset=utf-8");
             </div>
          </div>
       </section>
-      <footer class="text-center bg-dark">
+      <!-- <footer class="text-center bg-dark">
          <div class="container text-white py-4 py-lg-5">
             <ul class="list-inline">
                <li class="list-inline-item me-4"><a class="link-light" href="#">Web design</a></li>
@@ -147,7 +148,8 @@ header("content-type:text/html;charset=utf-8");
             </ul>
             <p class="text-muted mb-0">Copyright © 2022 Brand</p>
          </div>
-      </footer>
+      </footer> -->
+      <?php require 'footer.php';?>
       <script src="<?php echo URLROOT; ?>/login_assets/bootstrap/js/bootstrap.min.js"></script><script src="<?php echo URLROOT; ?>/login_assets/js/script.min.js"></script>
    </body>
 </html>
