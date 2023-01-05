@@ -5,7 +5,7 @@
         }
 
         public function product(){
-            $this->view('users/product');
+            $this->view('pages/product');
         }
 
 

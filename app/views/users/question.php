@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="<?php echo URLROOT;?>/question_assets/css/Features-Cards-icons.css">
     <link rel="stylesheet" href="<?php echo URLROOT;?>/question_assets/css/Footer-with-social-media-icons.css">
 </head>
-
+<?php require 'header.php';?>
 <body class="text-bg-dark">
-    <nav class="bg-light navbar navbar-expand-lg sticky-top">
+    <!-- <nav class="bg-light navbar navbar-expand-lg sticky-top">
         <div class="container d-lg-flex align-items-lg-center"><a class="navbar-brand" href="#" style="font-weight: bold;font-size: 28px;">YOFU</a><button class="navbar-toggler Triger" data-bs-toggle="offcanvas" type="button" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg"><span class="navbar-toggler-icon"></span></button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
                 <ul class="nav d-flex justify-content-lg-start align-items-lg-center flex-column flex-lg-row navmove" style="font-weight: bold;font-size: 21px;">
@@ -31,7 +31,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
     <section>
         <div data-bss-parallax-bg="true" style="height: 600px;background-image: url(<?php echo URLROOT;?>/question_assets/img/beauty-products-and-makeup-on-black-background.jpg);background-position: center;background-size: cover;margin-top: -10px;padding-bottom: 0px;margin-bottom: 0px;"></div>
     </section>
