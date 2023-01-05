@@ -163,66 +163,40 @@
                     </div>
                 </div>
             </div>
+
+            
+
             <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 pressgood gy-3 px-5" id="pressgood" style="display: none;">
                 <div class="row g-4 gx-5 row-cols-1 row-cols-md-3">
+
+                <?php foreach($data['like'] as $arr) { ?>
                     <div class="col-12 col-md-4" data-aos="fade-up" id="product-item-animation-element-slide-top-left-4">
                         <div class="d-flex flex-column justify-content-xxl-start product-container">
                             <div class="row" style="box-shadow: 2px 2px 5px 2px;">
-                                <div class="col"><img class="rounded img-fluid d-block w-100 fit-cover" style="max-width: 100%;height: auto;" src="../MemberCenter_assets/img/商品照1.jpg"></div>
+                                <div class="col"><img class="rounded img-fluid d-block w-100 fit-cover" style="max-width: 100%;height: auto;" src="<?php echo 'http://34.81.132.111/html' . substr($arr->Product_imglocation, 2) ;?>"></div>
                                 <div class="col-8 col-xxl-12 text-center col-12" style="text-overflow: ellipsis;">
-                                    <h4 class="text-truncate text-center">這三小</h4>
+                                    <h4 class="text-truncate text-center"><?php echo $arr->Product_name ;?></h4>
                                 </div>
                                 <div class="col-12">
-                                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sem sed nisl dignissim, facilisis dapibus lacus vulputate. Sed lacinia lacinia magna. </p>
+                                    <p class="product-description"><?php echo $arr->Product_intro?></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4" data-aos="fade-up" id="product-item-animation-element-slide-top-left-5">
-                        <div class="d-flex flex-column justify-content-xxl-start product-container">
-                            <div class="row" style="box-shadow: 2px 2px 5px 2px;">
-                                <div class="col"><img class="rounded img-fluid d-block w-100 fit-cover" style="max-width: 100%;height: auto;" src="../MemberCenter_assets/img/商品照1.jpg"></div>
-                                <div class="col-8 col-xxl-12 text-center col-12" style="text-overflow: ellipsis;">
-                                    <h4 class="text-truncate text-center">dffefsedfesfesfefef</h4>
-                                </div>
-                                <div class="col-12">
-                                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sem sed nisl dignissim, facilisis dapibus lacus vulputate. Sed lacinia lacinia magna. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4" data-aos="fade-up" id="product-item-animation-element-slide-top-left-6">
-                        <div class="d-flex flex-column justify-content-xxl-start product-container">
-                            <div class="row" style="box-shadow: 2px 2px 5px 2px;">
-                                <div class="col"><img class="rounded img-fluid d-block w-100 fit-cover" style="max-width: 100%;height: auto;" src="../MemberCenter_assets/img/商品照1.jpg"></div>
-                                <div class="col-8 col-xxl-12 text-center col-12" style="text-overflow: ellipsis;">
-                                    <h4 class="text-truncate text-center">dffefsedfesfesfefef</h4>
-                                </div>
-                                <div class="col-12">
-                                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sem sed nisl dignissim, facilisis dapibus lacus vulputate. Sed lacinia lacinia magna. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4" data-aos="fade-up" id="product-item-animation-element-slide-top-left-7">
-                        <div class="d-flex flex-column justify-content-xxl-start product-container">
-                            <div class="row" style="box-shadow: 2px 2px 5px 2px;">
-                                <div class="col"><img class="rounded img-fluid d-block w-100 fit-cover" style="max-width: 100%;height: auto;" src="../MemberCenter_assets/img/商品照1.jpg"></div>
-                                <div class="col-8 col-xxl-12 text-center col-12" style="text-overflow: ellipsis;">
-                                    <h4 class="text-truncate text-center">dffefsedfesfesfefef</h4>
-                                </div>
-                                <div class="col-12">
-                                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sem sed nisl dignissim, facilisis dapibus lacus vulputate. Sed lacinia lacinia magna. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                    
+                    <?php }?>
                 </div>
             </div>
+
             <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 collection" id="collection" style="display: none;">
                 <div class="row">
                     <div class="col text-center d-flex d-sm-flex justify-content-end justify-content-sm-end col-12" id="btn_collection_add"><button class="btn btn-success btn-lg" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Add" title="scac"><i class="fas fa-plus" style="font-size:15px;"></i></button></div>
+                    <?php echo empty($data['collection']) ? "沒有收藏 快去收 ! " : '' ;?>
+                    
+                    <?php foreach($data['collection'] as $arr) { ?>
                     <div class="col-6 col-sm-6 col-md-4 col-4">
+                    
                         <div class="card">
                             <div class="card-body d-flex flex-column align-items-sm-center">
                                 <div class="row" style="border-style: solid;border-color: var(--bs-gray-500);border-radius: 8px;box-shadow: inset -2px -2px 2px var(--bs-gray-500);">
@@ -236,7 +210,7 @@
                                                         <hr>
                                                     </div>
                                                     <div class="col btn_collection-1"><a href="#" style="text-decoration:none">
-                                                            <h4 class="text-nowrap" style="text-align: center;color: var(--bs-gray-900);font-weight: bold;">乳霜</h4>
+                                                            <h4 class="text-nowrap" style="text-align: center;color: var(--bs-gray-900);font-weight: bold;"><?php echo $arr->ProductCategory_type ;?></h4>
                                                         </a></div>
                                                 </div>
                                             </li>
@@ -245,145 +219,38 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-4">
-                        <div class="card">
-                            <div class="card-body d-flex flex-column align-items-sm-center">
-                                <div class="row" style="border-style: solid;border-color: var(--bs-gray-500);border-radius: 8px;box-shadow: inset -2px -2px 2px var(--bs-gray-500);">
-                                    <div class="col text-end d-xxl-flex justify-content-xxl-end"><button class="btn btn-sm" style="margin-left: 5px;background: var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size: 13px;"></i></button><button class="btn btn-sm" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete" title="safas"><i class="fa fa-close" style="font-size: 21px;"></i></button></div>
-                                    <div class="col d-flex justify-content-center col-12">
-                                        <ul class="nav">
-                                            <li class="nav-item" href="#">
-                                                <div class="row d-flex flex-column">
-                                                    <div class="col btn_collection-1"><a href="#"><img class="img-thumbnail object-fit-fill" src="../MemberCenter_assets/img/swiftui.png"></a></div>
-                                                    <div class="col">
-                                                        <hr>
-                                                    </div>
-                                                    <div class="col btn_collection-1"><a href="#" style="text-decoration:none">
-                                                            <h4 class="text-nowrap" style="text-align: center;color: var(--bs-gray-900);font-weight: bold;">乳霜</h4>
-                                                        </a></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-4">
-                        <div class="card">
-                            <div class="card-body d-flex flex-column align-items-sm-center">
-                                <div class="row" style="border-style: solid;border-color: var(--bs-gray-500);border-radius: 8px;box-shadow: inset -2px -2px 2px var(--bs-gray-500);">
-                                    <div class="col text-end d-xxl-flex justify-content-xxl-end"><button class="btn btn-sm" style="margin-left: 5px;background: var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size: 13px;"></i></button><button class="btn btn-sm" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete"><i class="fa fa-close" style="font-size: 21px;"></i></button></div>
-                                    <div class="col d-flex justify-content-center col-12">
-                                        <ul class="nav">
-                                            <li class="nav-item" href="#">
-                                                <div class="row d-flex flex-column">
-                                                    <div class="col btn_collection-1"><a href="#"><img class="img-thumbnail object-fit-fill" src="../MemberCenter_assets/img/swiftui.png"></a></div>
-                                                    <div class="col">
-                                                        <hr>
-                                                    </div>
-                                                    <div class="col btn_collection-1"><a href="#" style="text-decoration:none">
-                                                            <h4 class="text-nowrap" style="text-align: center;color: var(--bs-gray-900);font-weight: bold;">乳霜</h4>
-                                                        </a></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-4">
-                        <div class="card">
-                            <div class="card-body d-flex flex-column align-items-sm-center">
-                                <div class="row" style="border-style: solid;border-color: var(--bs-gray-500);border-radius: 8px;box-shadow: inset -2px -2px 2px var(--bs-gray-500);">
-                                    <div class="col text-end d-xxl-flex justify-content-xxl-end"><button class="btn btn-sm" style="margin-left: 5px;background: var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size: 13px;"></i></button><button class="btn btn-sm" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete" title="safas"><i class="fa fa-close" style="font-size: 21px;"></i></button></div>
-                                    <div class="col d-flex justify-content-center col-12">
-                                        <ul class="nav">
-                                            <li class="nav-item" href="#">
-                                                <div class="row d-flex flex-column">
-                                                    <div class="col btn_collection-1"><a href="#"><img class="img-thumbnail object-fit-fill" src="../MemberCenter_assets/img/swiftui.png"></a></div>
-                                                    <div class="col">
-                                                        <hr>
-                                                    </div>
-                                                    <div class="col btn_collection-1"><a href="#" style="text-decoration:none">
-                                                            <h4 class="text-nowrap" style="text-align: center;color: var(--bs-gray-900);font-weight: bold;">乳霜</h4>
-                                                        </a></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-4">
-                        <div class="card">
-                            <div class="card-body d-flex flex-column align-items-sm-center">
-                                <div class="row" style="border-style: solid;border-color: var(--bs-gray-500);border-radius: 8px;box-shadow: inset -2px -2px 2px var(--bs-gray-500);">
-                                    <div class="col text-end d-xxl-flex justify-content-xxl-end"><button class="btn btn-sm" style="margin-left: 5px;background: var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size: 13px;"></i></button><button class="btn btn-sm" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete" title="safas"><i class="fa fa-close" style="font-size: 21px;"></i></button></div>
-                                    <div class="col d-flex justify-content-center col-12">
-                                        <ul class="nav">
-                                            <li class="nav-item" href="#">
-                                                <div class="row d-flex flex-column">
-                                                    <div class="col btn_collection-1"><a href="#"><img class="img-thumbnail object-fit-fill" src="../MemberCenter_assets/img/swiftui.png"></a></div>
-                                                    <div class="col">
-                                                        <hr>
-                                                    </div>
-                                                    <div class="col btn_collection-1"><a href="#" style="text-decoration:none">
-                                                            <h4 class="text-nowrap" style="text-align: center;color: var(--bs-gray-900);font-weight: bold;">乳霜</h4>
-                                                        </a></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-4">
-                        <div class="card">
-                            <div class="card-body d-flex flex-column align-items-sm-center">
-                                <div class="row" style="border-style: solid;border-color: var(--bs-gray-500);border-radius: 8px;box-shadow: inset -2px -2px 2px var(--bs-gray-500);">
-                                    <div class="col text-end d-xxl-flex justify-content-xxl-end"><button class="btn btn-sm" style="margin-left: 5px;background: var(--blue);" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit"><i class="far fa-edit" style="font-size: 13px;"></i></button><button class="btn btn-sm" style="margin-left:5px;" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal-Delete" title="safas"><i class="fa fa-close" style="font-size: 21px;"></i></button></div>
-                                    <div class="col d-flex justify-content-center col-12">
-                                        <ul class="nav">
-                                            <li class="nav-item" href="#">
-                                                <div class="row d-flex flex-column">
-                                                    <div class="col btn_collection-1"><a href="#"><img class="img-thumbnail object-fit-fill" src="../MemberCenter_assets/img/swiftui.png"></a></div>
-                                                    <div class="col">
-                                                        <hr>
-                                                    </div>
-                                                    <div class="col btn_collection-1"><a href="#" style="text-decoration:none">
-                                                            <h4 class="text-nowrap" style="text-align: center;color: var(--bs-gray-900);font-weight: bold;">乳霜</h4>
-                                                        </a></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
+
+                    
+                    
                 </div>
             </div>
+
+            
             <div class="col product_for_collection gy-3 px-5" id="product_for_collection" style="display: none;">
                 <div class="row g-4 gx-5 row-cols-1 row-cols-md-3">
+                <?php //echo empty($data['collection']) ? "沒有收藏 快去收 ! " : '' ;?>
+                <?php foreach($data['collection'] as $arr) { ?>
+
+                
                     <div class="col-12 col-md-4" data-aos="fade-up" id="product-item-animation-element-slide-top-left">
                         <div class="d-flex flex-column justify-content-xxl-start product-container">
                             <div class="row" style="box-shadow: 2px 2px 5px 2px;">
                                 <div class="col"><img class="rounded img-fluid d-block w-100 fit-cover" style="max-width: 100%;height: auto;" src="../MemberCenter_assets/img/商品照1.jpg"></div>
                                 <div class="col-8 col-xxl-12 text-center col-12" style="text-overflow: ellipsis;">
-                                    <h4 class="text-truncate text-center">dffefsedfesfesfefef</h4>
+                                    <h4 class="text-truncate text-center"><?php echo $arr->Product_name?></h4>
                                 </div>
                                 <div class="col-12">
-                                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sem sed nisl dignissim, facilisis dapibus lacus vulputate. Sed lacinia lacinia magna. </p>
+                                    <p class="product-description"><?php echo $arr->Product_intro?></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4" data-aos="fade-up" id="product-item-animation-element-slide-top-left-3">
+                    <?php }?>
+
+                    <!-- <div class="col-12 col-md-4" data-aos="fade-up" id="product-item-animation-element-slide-top-left-3">
                         <div class="d-flex flex-column justify-content-xxl-start product-container">
                             <div class="row" style="box-shadow: 2px 2px 5px 2px;">
                                 <div class="col"><img class="rounded img-fluid d-block w-100 fit-cover" style="max-width: 100%;height: auto;" src="../MemberCenter_assets/img/商品照1.jpg"></div>
@@ -421,95 +288,36 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
+            
+            
             <div class="col product_for_collection gy-3 gx-5 comment" id="comments" style="display: none;">
+
+                <?php echo empty($data['comment']) ? "沒有評論 快去留 ! " : '' ;?>
+                <?php foreach($data['comment'] as $arr) { ?>
                 <div class="row" id="commemt">
                     <div class="col-12 d-flex align-items-center align-items-lg-center" id="comment_date" style="background: #eceff2;border-radius: 11px;height: 45px;">
-                        <h4 style="margin-bottom: 0px;">APR,12,2021</h4>
+                        <h4 style="margin-bottom: 0px;"><?php echo $arr->ProductComment_date ;?></h4>
                     </div>
                     <div class="col-10" id="comment_ourlogo"><a class="navbar-brand" style="font-weight: bold;font-size: 28px;">YOFU</a></div>
                     <div class="col-2 d-flex justify-content-center align-items-center justify-content-xl-end" id="comment_close"><button class="btn btn-sm" data-bs-toggle="modal" data-bss-tooltip="" style="margin-left:5px;" type="submit" data-bs-target="#exampleModal-Delete" title="safas"><i class="fa fa-close" style="font-size: 21px;"></i></button></div>
                     <div class="col-8" id="comment_content">
-                        <p>裡面雖然有酸類但不刺激，皮膚透亮有光澤<br></p>
+                        <p><?php echo $arr->ProductComment_content ;?><br></p>
                     </div>
-                    <div class="col-4 d-xxl-flex justify-content-xxl-center" id="comment_product_image"><img width="100%" height="auto" src="../MemberCenter_assets/img/商品照1.jpg" style="max-width: 191.988px;"></div>
+                    <div class="col-4 d-xxl-flex justify-content-xxl-center" id="comment_product_image"><img width="100%" height="auto" src="<?php echo 'http://34.81.132.111/html' . substr($arr->Product_imglocation, 2) ;?>" style="max-width: 191.988px;"></div>
                     <div class="col-12" id="comment_product_name">
-                        <h6 style="font-weight: bold;"><br><span style="color: rgb(68, 68, 68);">克蘭詩 漾采肌活美肌精華水 200m</span><br><br></h6>
+                        <h6 style="font-weight: bold;"><br><span style="color: rgb(68, 68, 68);"><?php echo $arr->Product_name ;?></span><br><br></h6>
                     </div>
                     <div class="col col-12" id="comment_time">
-                        <h6 style="font-size: 12px;"><br>00:05:04<br><br></h6>
+                        <h6 style="font-size: 12px;"><br><br><br></h6>
                     </div>
                 </div>
-                <div class="row" id="commemt-4">
-                    <div class="col-12 d-flex align-items-center align-items-lg-center" id="comment_date-4" style="background: #eceff2;border-radius: 11px;height: 45px;">
-                        <h4 style="margin-bottom: 0px;">APR,12,2021</h4>
-                    </div>
-                    <div class="col-10" id="comment_ourlogo-4"><a class="navbar-brand" style="font-weight: bold;font-size: 28px;">YOFU</a></div>
-                    <div class="col-2 d-flex justify-content-center align-items-center justify-content-xl-end" id="comment_close-4"><button class="btn btn-sm" data-bs-toggle="modal" data-bss-tooltip="" style="margin-left:5px;" type="submit" data-bs-target="#exampleModal-Delete" title="safas"><i class="fa fa-close" style="font-size: 21px;"></i></button></div>
-                    <div class="col-8" id="comment_content-4">
-                        <p>裡面雖然有酸類但不刺激，皮膚透亮有光澤<br></p>
-                    </div>
-                    <div class="col-4 d-xxl-flex justify-content-xxl-center" id="comment_product_image-4"><img width="100%" height="auto" src="../MemberCenter_assets/img/商品照1.jpg" style="max-width: 191.988px;"></div>
-                    <div class="col-12" id="comment_product_name-4">
-                        <h6 style="font-weight: bold;"><br><span style="color: rgb(68, 68, 68);">克蘭詩 漾采肌活美肌精華水 200m</span><br><br></h6>
-                    </div>
-                    <div class="col col-12" id="comment_time-4">
-                        <h6 style="font-size: 12px;"><br>00:05:04<br><br></h6>
-                    </div>
-                </div>
-                <div class="row" id="commemt-3">
-                    <div class="col-12 d-flex align-items-center align-items-lg-center" id="comment_date-3" style="background: #eceff2;border-radius: 11px;height: 45px;">
-                        <h4 style="margin-bottom: 0px;">APR,12,2021</h4>
-                    </div>
-                    <div class="col-10" id="comment_ourlogo-3"><a class="navbar-brand" style="font-weight: bold;font-size: 28px;">YOFU</a></div>
-                    <div class="col-2 d-flex justify-content-center align-items-center justify-content-xl-end" id="comment_close-3"><button class="btn btn-sm" data-bs-toggle="modal" data-bss-tooltip="" style="margin-left:5px;" type="submit" data-bs-target="#exampleModal-Delete" title="safas"><i class="fa fa-close" style="font-size: 21px;"></i></button></div>
-                    <div class="col-8" id="comment_content-3">
-                        <p>裡面雖然有酸類但不刺激，皮膚透亮有光澤<br></p>
-                    </div>
-                    <div class="col-4 d-xxl-flex justify-content-xxl-center" id="comment_product_image-3"><img width="100%" height="auto" src="../MemberCenter_assets/img/商品照1.jpg" style="max-width: 191.988px;"></div>
-                    <div class="col-12" id="comment_product_name-3">
-                        <h6 style="font-weight: bold;"><br><span style="color: rgb(68, 68, 68);">克蘭詩 漾采肌活美肌精華水 200m</span><br><br></h6>
-                    </div>
-                    <div class="col col-12" id="comment_time-3">
-                        <h6 style="font-size: 12px;"><br>00:05:04<br><br></h6>
-                    </div>
-                </div>
-                <div class="row" id="commemt-2">
-                    <div class="col-12 d-flex align-items-center align-items-lg-center" id="comment_date-2" style="background: #eceff2;border-radius: 11px;height: 45px;">
-                        <h4 style="margin-bottom: 0px;">APR,12,2021</h4>
-                    </div>
-                    <div class="col-10" id="comment_ourlogo-2"><a class="navbar-brand" style="font-weight: bold;font-size: 28px;">YOFU</a></div>
-                    <div class="col-2 d-flex justify-content-center align-items-center justify-content-xl-end" id="comment_close-2"><button class="btn btn-sm" data-bs-toggle="modal" data-bss-tooltip="" style="margin-left:5px;" type="submit" data-bs-target="#exampleModal-Delete" title="safas"><i class="fa fa-close" style="font-size: 21px;"></i></button></div>
-                    <div class="col-8" id="comment_content-2">
-                        <p>裡面雖然有酸類但不刺激，皮膚透亮有光澤<br></p>
-                    </div>
-                    <div class="col-4 d-xxl-flex justify-content-xxl-center" id="comment_product_image-2"><img width="100%" height="auto" src="../MemberCenter_assets/img/商品照1.jpg" style="max-width: 191.988px;"></div>
-                    <div class="col-12" id="comment_product_name-2">
-                        <h6 style="font-weight: bold;"><br><span style="color: rgb(68, 68, 68);">克蘭詩 漾采肌活美肌精華水 200m</span><br><br></h6>
-                    </div>
-                    <div class="col col-12" id="comment_time-2">
-                        <h6 style="font-size: 12px;"><br>00:05:04<br><br></h6>
-                    </div>
-                </div>
-                <div class="row" id="commemt-1">
-                    <div class="col-12 d-flex align-items-center align-items-lg-center" id="comment_date-1" style="background: #eceff2;border-radius: 11px;height: 45px;">
-                        <h4 style="margin-bottom: 0px;">APR,12,2021</h4>
-                    </div>
-                    <div class="col-10" id="comment_ourlogo-1"><a class="navbar-brand" style="font-weight: bold;font-size: 28px;">YOFU</a></div>
-                    <div class="col-2 d-flex justify-content-center align-items-center justify-content-xl-end" id="comment_close-1"><button class="btn btn-sm" data-bs-toggle="modal" data-bss-tooltip="" style="margin-left:5px;" type="submit" data-bs-target="#exampleModal-Delete" title="safas"><i class="fa fa-close" style="font-size: 21px;"></i></button></div>
-                    <div class="col-8" id="comment_content-1">
-                        <p>裡面雖然有酸類但不刺激，皮膚透亮有光澤<br></p>
-                    </div>
-                    <div class="col-4 d-xxl-flex justify-content-xxl-center" id="comment_product_image-1"><img width="100%" height="auto" src="../MemberCenter_assets/img/商品照1.jpg" style="max-width: 191.988px;"></div>
-                    <div class="col-12" id="comment_product_name-1">
-                        <h6 style="font-weight: bold;"><br><span style="color: rgb(68, 68, 68);">克蘭詩 漾采肌活美肌精華水 200m</span><br><br></h6>
-                    </div>
-                    <div class="col col-12" id="comment_time-1">
-                        <h6 style="font-size: 12px;"><br>00:05:04<br><br></h6>
-                    </div>
-                </div>
+                <?php } ?>
+
+                
+
             </div>
         </div>
     </div>
@@ -631,6 +439,32 @@
     <script src="../MemberCenter_assets/js/Offcanvasjustifiy.js"></script>
     <script src="../MemberCenter_assets/js/page.js"></script>
     <script src="../MemberCenter_assets//js/Toasts.js"></script>
+    <script>
+
+
+
+        var product_for_collection = document.querySelector(".product_for_collection");
+
+        for (var i = 0; i < button_collection_1.length; i++){ //按下我的收藏內的資料夾
+            button_collection_1[i].addEventListener('click', function(){
+         // button_memberdata.style.display = "none";
+        if (product_for_collection.style.display === "none"){
+            // button_memberdata.style.display = "none";
+            product_for_collection.style.display = "block";///商品出現
+
+            changepassword.style.display = "none";
+            memberdata.style.display = "none";
+            pressgood.style.display = "none";
+            collection.style.display = "none";
+            comment.style.display = "none";
+
+        }
+    })
+  }
+
+
+    </script>
+
 </body>
 
 </html>

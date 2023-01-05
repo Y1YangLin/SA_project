@@ -167,19 +167,22 @@
 
         public function MemberCenter(){
 
-            // echo $_SESSION['user_id'];
-            // exit;
+            
 
             $user = $this->userModel->getUserDataById($_SESSION['user_id']);
-            $
-
+            $like = $this->getLikeRecord();
+            $comment = $this->getCommentRecord();
+            $collection = $this->getCollectionRecord();
+            // print_r($like);
+            // exit;
 
             $data = [
                 'user' => $user,
-                'like' => '',
-            
+                'like' => $like,
+                'comment' => $comment,
+                'collection' => $collection,
             ];
-            // print_r($data);
+            // print_r($data['collection']);
             // exit;
 
             $this->view('pages/membercenter', $data);
@@ -258,14 +261,21 @@
 
         public function getLikeRecord(){
 
+            $data = $this->userModel->getUserLikedItems($_SESSION['user_id']);
+
+            return $data;
         }
 
         public function getCollectionRecord(){
+            $data = $this->userModel->getUserCollection($_SESSION['user_id']);
 
+            return $data;
         }
 
         public function getCommentRecord(){
-            
+            $data = $this->userModel->getUserComment($_SESSION['user_id']);
+
+            return $data;
         }
 
         public function createUserSession($user){

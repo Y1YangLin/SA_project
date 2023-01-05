@@ -91,7 +91,7 @@ button_collection.onclick = function(){//按下我的收藏
     }
 }
 
-for (var i = 0; i < button_collection_1.length; i++){//按下我的收藏內的資料夾
+for (var i = 0; i < button_collection_1.length; i++){ //按下我的收藏內的資料夾
     button_collection_1[i].addEventListener('click', function(){
          // button_memberdata.style.display = "none";
         if (product_for_collection.style.display === "none"){

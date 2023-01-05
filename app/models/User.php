@@ -68,7 +68,7 @@
             $this->db->query('UPDATE member SET Member_password = :newPwd WHERE Member_id = :id');
 
 
-            
+
             $this->db->bind(':id', $_SESSION['user_id']);
             $this->db->bind(':newPwd', $data['newPwd']);
 
@@ -118,15 +118,33 @@
         }   
 
         public function getUserLikedItems($id){
+            $this->db->query('SELECT * FROM `likey` JOIN `product` JOIN member WHERE likey.Likey_Member_id = member.Member_id AND likey.Likey_Product_id = Product.Product_id AND member.Member_id = :id ;');
 
+            $this->db->bind(':id', $id);
+            
+            $row = $this->db->resultSet();
+            
+            return $row;
         }
 
         public function getUserComment($id){
+            $this->db->query('SELECT * FROM member JOIN productcomment JOIN product WHERE member.Member_id = productcomment.ProductComment_Member_id 
+            AND productcomment.ProductComment_Product_id = product.Product_id AND member.Member_id = :id ;');
 
+            $this->db->bind(':id', $id);   
+            $row = $this->db->resultSet();
+            
+            return $row;
         }
 
         public function getUserCollection($id){
-
+            $this->db->query('SELECT * FROM collection JOIN member JOIN product JOIN productcategory WHERE collection.Collection_Member_id = member.Member_id 
+            AND collection.Collection_Product_id = product.Product_id AND product.Product_ProductCategory_id = productcategory.ProductCategory_id AND member.Member_id = :id ;');
+            
+            $this->db->bind(':id', $id);   
+            $row = $this->db->resultSet();
+            
+            return $row;
         }
 
     }
