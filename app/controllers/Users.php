@@ -4,6 +4,21 @@
             $this->userModel = $this->model('User');
         }
 
+        public function product(){
+            $this->view('pages/product');
+        }
+
+
+        public function signed(){
+            $this->view('pages/dashboard');
+        }
+
+        public function q(){
+            // echo "ok";
+            // exit;
+            $this->view('users/question');
+        }
+
         public function signup(){
             
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -58,7 +73,7 @@
                     
                     //hash密碼 -> model處理
                     $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
-
+                    echo 'ok';
                     
                     if($this->userModel->register($data)){
                         

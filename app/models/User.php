@@ -9,15 +9,16 @@
             $this->db->query('INSERT INTO member (Member_name, Member_password, Member_email) VALUES 
             (:username, :password, :email)');
             
-            
             $this->db->bind(':username', $data['username']);
             $this->db->bind(':password', $data['password']);
             $this->db->bind(':email', $data['email']);
-
+            echo ' db ok';
             
             if($this->db->execute()){
+                echo ' db ex';
                 return true;
             } else {
+                echo ' db fail';
                 return false;
             }
             
