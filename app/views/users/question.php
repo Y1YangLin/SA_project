@@ -18,7 +18,7 @@
                 <ul class="nav d-flex justify-content-lg-start align-items-lg-center flex-column flex-lg-row navmove" style="font-weight: bold;font-size: 21px;">
                     <li class="nav-item"><a class="nav-link" href="<?php echo URLROOT;?>/users/signed" style="color:var(--bs-navbar-hover-color);font-weight:bold;">產品</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo URLROOT;?>/users/q" style="color:var(--bs-navbar-hover-color);font-weight:bold;">膚質分析</a></li>
-                    <li class="nav-item" style="height: 47.5px;"><button class="btn d-flex align-items-center" type="submit" data-bs-toggle="modal" data-bs-target="#Modal-Customerservice" style="font-size: 21px;width: 100%;height: 100%;padding: 8px 16px;font-weight: bold;"><br><strong><span style="color: var(--bs-navbar-hover-color); background-color: rgb(248, 249, 250);">客戶服務</span></strong><br><br></button></li>
+                    <li class="nav-item" style="height: 47.5px;"><button class="btn text-bg-light d-flex align-items-center" type="submit" data-bs-toggle="modal" data-bs-target="#Modal-Customerservice" style="font-size: 21px;width: 100%;height: 100%;padding: 8px 16px;font-weight: bold;"><br><strong><span style="color: var(--bs-navbar-hover-color); background-color: rgb(248, 249, 250);">客戶服務</span></strong><br><br></button></li>
                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" role="button" aria-expanded="false" href="#" data-bs-toggle="dropdown" style="color: var(--bs-navbar-brand-hover-color);">會員中心</a>
                         <ol class="dropdown-menu">
                             <li><a class="dropdown-item" href="<?php echo URLROOT;?>/users/membercenter">我的帳戶</a></li>
