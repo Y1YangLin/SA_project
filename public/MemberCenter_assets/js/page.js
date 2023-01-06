@@ -118,7 +118,7 @@ button_comment.onclick = function(){//按下我的評論
         memberdata.style.display = "none";
         pressgood.style.display = "none";
         collection.style.display = "none";
-        button_collection_1.style.display = "none";
+        product_for_collection.style.display = "none";
 
 
     }

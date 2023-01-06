@@ -50,7 +50,7 @@
                     <li class="list-inline-item list-inline-item"><a class="btn" type="button" href = "<?php echo URLROOT ?>/Admins/login"><i class="far fa-user text-light" style="height: 16px;width: 16px;"></i></a></li>
                 </ul>
             </div>
-        </div>
+        </div>      
     </footer>
 
 

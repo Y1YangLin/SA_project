@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>W3.CSS Template</title>
+    <title>產品頁面</title>
     <link rel="stylesheet" href="<?php echo URLROOT;?>/product_assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo URLROOT;?>/product_assets/css/Noto%20Sans.css">
     <link rel="stylesheet" href="<?php echo URLROOT;?>/product_assets/css/Roboto.css">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="<?php echo URLROOT;?>/product_assets/css/Ludens-Client---Login-Dropdown.css">
     <link rel="stylesheet" href="<?php echo URLROOT;?>/product_assets/css/Pricing-Yearly--Monthly-badges.css">
 </head>
-<?php require 'header.php';?>
+<?php require_once 'header.php';?>
 <body>
     <!-- <nav class="bg-light navbar navbar-expand-lg sticky-top">
         <div class="container d-lg-flex align-items-lg-center"><a class="navbar-brand" href="#" style="font-weight: bold;font-size: 28px;">YOFU</a><button class="navbar-toggler Triger" data-bs-toggle="offcanvas" type="button" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg"><span class="navbar-toggler-icon"></span></button>

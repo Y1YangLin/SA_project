@@ -5,18 +5,24 @@
         }
 
         public function product(){
-            $this->view('pages/product');
-        }
-
-
-        public function signed(){
-            $this->view('pages/dashboard');
-        }
-
-        public function q(){
-            // echo "ok";
+            // print_r(isset($_SESSION['user_id']));
             // exit;
-            $this->view('users/question');
+            $this->view('pages/product');
+            
+        }
+
+        public function question(){
+            // echo 'test';
+            // exit;
+            if(isset($_SESSION['user_id'])){
+                // echo 'test';
+                // exit;
+                $this->view('pages/question');
+            }else{
+                
+                redirect('users/login');
+            }
+            
         }
 
         public function signup(){
@@ -112,6 +118,9 @@
 
         public function login() {
             
+
+
+
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 
                 $_POST = filter_input_array(INPUT_POST,FILTER_DEFAULT);

@@ -814,7 +814,7 @@
             unset($_SESSION['admin_id']);
             unset($_SESSION['admin_email']);
             
-            $this->view('users/login', $data);
+            redirect('admins/login');
 
         }
 
@@ -836,11 +836,74 @@
         }
 
         public function login(){
-            $this->view('admins/login');
-            if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-
+            
+            if(isset($_SESSION['admin_id'])){
+                redirect('admins/Member');
             }
+
+            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                $_POST = filter_input_array(INPUT_POST,FILTER_DEFAULT);
+
+
+                $data = [
+                    'email' => trim($_POST['email']),
+                    'password' => trim($_POST['password']),
+
+                    'password_err' => '',
+                    'email_err' => '',
+                ];
+
+            
+                if(empty($data['password'])){
+                    $data['password_err'] = '請輸入密碼';
+                }
+
+                if(empty($data['email'])){
+                    $data['email_err'] = '請輸入信箱';
+                }else if($this->adminModel->findAdminByEmail($data['email'])){
+
+                } else {
+                    
+                    $data['email_err'] = '尚未註冊 找不到信箱 !!';
+                }
+            
+                if(empty($data['email_err']) && empty($data['password_err'])){
+
+                    $loggedInAdmin= $this->adminModel->login($data['email'], $data['password']);
+
+                    if($loggedInAdmin){
+
+                        
+                        $this->createAdminSession($loggedInUser);
+                    
+                    }else{
+                        $data['password_err'] = '就這 ? 密碼錯了';
+                        $this->view('admins/login', $data);
+                    }
+                } else {
+                    
+
+                    
+                
+
+                    $this->view('admins/login', $data);
+                }
+            }else{
+                $data = [
+                    'email' => '',
+                    'password' => '',
+
+                    'password_err' => '',
+                    'email_err' => '',
+                ];
+
+                $this->view('admins/login', $data);
+            }
+        
+
+
+            
+        
         }
         
 
@@ -860,7 +923,7 @@
                 $_SESSION['admin_email'] = $admin->Manager_email;
                 
                 // $_SESSION['user_id'] = $user->id;
-                redirect('pages/Commit');
+                redirect('admins/Member');
 
 
         }

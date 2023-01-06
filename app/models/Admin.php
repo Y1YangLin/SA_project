@@ -8,6 +8,43 @@
 
         }
     
+        public function login($email, $password){
+
+            $row = $this->db->single();
+
+            $hashed_password = $row->Manager_password;
+
+            // print_r($hashed_password);
+            // print_r($password);
+            // exit;
+            
+            if(password_verify($password, $hashed_password)){
+                // echo 'login success !';
+                // exit;
+                return $row;
+            }else{
+                // echo 'Login failed !';
+                // exit;
+                return false;
+            }            
+
+        }
+
+        public function findAdminByEmail($email){
+
+            $this->db->query('SELECT * FROM manager WHERE manager_email = :email ');
+            $this->db->bind(':email', $email);
+
+            $row = $this->db->single();
+
+            
+            if($this->db->rowCount() > 0){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
         //add modify delete
 
         // Member
